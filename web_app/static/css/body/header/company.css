@@ -1,0 +1,180 @@
+/* section configuring */
+
+header {
+    width: 100vw;
+
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 10vh 7vh 3.5vh;
+}
+
+/* sub section code start */
+
+#company {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+    margin-bottom: 1rem;
+    height: 100%;
+}
+
+#company a {
+    display: inline-block;
+    width: 100px;
+    
+}
+
+#sub-name {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+
+#logo {
+   width: 110px;
+   height: 110px;
+   margin: 0;
+   margin-top: 0.7rem;
+   padding: 0;
+}
+
+h1 {
+    /* grid-column: 1 / -1; */
+
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    margin: 0 0 0 1rem;
+
+    color:var(--background-color-3);
+    font-style: sans-serif;
+    font-size: 3rem;
+
+    border-bottom: 0.18rem solid var(--background-color-3);
+}
+
+#subtitle {
+    margin-left: 4rem;
+
+    grid-column: 1 / -1;
+
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#company a:-webkit-any-link {
+    color: var(--background-color-3);
+    cursor: pointer;
+    
+}
+
+/* height media queries below */
+
+@media (max-height: 845px ) {
+    header {
+    grid-template-rows: 15vh 7vh 3.5vh;
+    }
+}
+
+@media (max-height: 650px ) {
+    header {
+        grid-template-rows: 15vh 10vh 3.5vh;
+        }
+  
+}
+
+@media (max-height: 550px ) {
+    header {
+        grid-template-rows: 17vh 7vh 3.5vh;
+        }
+  
+}
+
+@media (max-height: 470px ) {
+    header {
+        grid-template-rows: 19vh 7vh 3.5vh;
+        }
+  
+}
+
+@media (max-height: 420px ) {
+    header {
+        grid-template-rows: 21vh 7vh 3.5vh;
+        }
+  
+}
+
+/* width media queries below */
+
+@media (max-width: 1280px ) {
+    
+    #logo {
+        width: 6rem;
+        height: 6rem;
+        margin-top: 0.6rem;
+        
+    }
+
+}
+
+
+@media (max-width: 1000px ) {
+    
+    #logo {
+            
+        margin-top: 0.6rem;
+        
+    }
+
+}
+
+@media (max-width: 650px ) {
+
+    #company {
+        margin-left: 5px;
+        
+    }
+
+    #sub-name {
+        margin-right: 5rem;
+        
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        
+    }
+
+    #subtitle {
+        font-size: 1.1rem;
+        margin-left: 3.5rem;
+        
+    }
+
+    #logo {
+        height: 7rem;
+        width: 7rem;
+        
+    }
+}
+
+@media (max-width: 550px ) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #subtitle {
+        font-size: 1.25rem;
+        margin-left: 2.7rem;
+    }
+
+    #logo {
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+        height: 6rem;
+        width: 6rem;
+    }
+}
+
+

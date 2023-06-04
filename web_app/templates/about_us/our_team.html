@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% from "/utilities/macros/employee_card.jinja2" import employee_card %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/our_team/ourteam_main_content.css">
+<link rel="stylesheet" href="/static/css/our_team/employee_card.css">
+{% endblock %}
+
+{% block main_content %}
+
+<main class="main__ourteam">
+    <h1 class="team__heading">Our Team
+        <hr>
+        <hr>
+    </h1>
+      
+    <section class="team__layout">
+    
+        {{ employee_card(employees) }}
+    
+    </section>
+</main>
+
+{% endblock %}

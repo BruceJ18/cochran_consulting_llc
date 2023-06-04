@@ -1,0 +1,19 @@
+/* variables */
+
+:root {
+    --background-color-1: rgba(47%, 79%, 79%, 40%);
+    --background-color-2: rgba(47, 79, 79, 0.7); 
+    --background-color-3: rgb(7, 7, 7);
+    --background-color-4: rgba(86, 125, 125, 0.52);
+}
+
+/* body element styles */
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    background-image: url(/static/images/cc-index-background.png);
+    background-size: cover;
+    
+}

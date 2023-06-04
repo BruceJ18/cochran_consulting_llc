@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% from "/utilities/macros/fields/iter_fields.jinja2" import iter_fields %}
+
+{% block head %}
+<link rel="stylesheet" href="/static/css/site_mods/add_or_edit.css">
+{% endblock %}
+
+{% block main_content %}
+<main class="main__add-or-edit">
+    <section class="add-or-edit">
+
+
+
+        <section class="form-selection">
+            <form class="form-type__form" method="post" action="{{ url_for('selected') }}">
+
+                <!--  ------------   input elements to determine element values after it -> below      -------------- -->
+                
+                <section class="form-type__radio-buttons">
+                    <div class="form-type__group">
+                        <label class="form-type__label" for="add">Add</label>
+                        <input class="form-type__input" name="add_or_edit" id="add" type="radio" value="add" >
+                    </div>
+                    <div class="form-type__group">
+                        <label class="form-type__label" for="edit">Edit</label>
+                        <input class="form-type__input" name="add_or_edit" id="edit" type="radio" value="edit">
+                    </div>
+                </section>
+                <section class="form-type__selects">
+
+                 <!--  ------------      first select elements -> below      -------------- -->
+                    <!-- (only one will render based on input above)  -->
+                    
+                    <label for="form-type__select--add"></label>
+                    <select class="form-type__select--add" name="select--add" id="form-type__select--add" >
+                        <option class="select__option" value="#">Option to Add</option>
+                        <option class="select__option" value="employees">Employees</option>
+                        <option class="select__option" value="businesses"> Businesses</option>
+                        <option class="select__option" value="real_estate">Real Estate</option>
+                    </select>
+                    <label for="form-type__select--edit"></label>
+                    <select class="form-type__select--edit" name="select--edit" id="form-type__select--edit">
+                        <option class="select__option" value="#">Options to Edit</option>
+                        <option class="select__option" value="clients">Clients</option>
+                        <option class="select__option" value="employees">Employees</option>
+                        <option class="select__option" value="businesses"> Businesses</option>
+                        <option class="select__option" value="real_estate">Real Estate</option>
+                    </select>
+                </section>
+
+                <!--  ------------      second select element -> below     -------------- -->
+               
+                <section class="form-type__selects--2" id="form-type__selects--2">
+                    <label  for="select--edit__entities"></label>
+                    <select class="select--edit__entities" id="select--edit__entities" name="entities_to_edit" >
+                        <option id="entity__option--default" value="#">Select One</option>
+                        
+                            {% for entity in entities %}
+                            <option class="entity__option" value="{{ entity.info.id }}">{{ entity.info.name }}</option>
+                            {% endfor %}
+                        
+                        
+                       
+                    </select>
+                </section>
+
+
+
+                
+                <button class="form-type__button" id="form-type__button" type="submit"> Submit
+        
+                </button>
+            </form>
+        </section>
+
+
+                {% block form_type %}
+                {% endblock %}
+
+
+    </section>
+</main>
+{% endblock %}

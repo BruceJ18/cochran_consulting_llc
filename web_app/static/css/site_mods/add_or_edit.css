@@ -1,0 +1,140 @@
+.main__add-or-edit {
+    height: 100vh;
+}
+
+
+.form-selection {
+    margin-bottom: 1rem;
+}
+
+
+/* --------------- FORM TYPE CSS --------------- */
+
+/* .form-type__form {
+
+}
+
+.form-type__radio-buttons {
+
+} */
+
+.form-type__group {
+    display: inline-block;
+    padding: 0.5rem 3rem;
+    margin: 0 0.8rem;
+    border: 3px solid darkslategray;
+    text-decoration: none;
+    color: whitesmoke;
+    background-color: black;
+}
+
+/* .form-type__label {
+
+}
+
+.form-type__input {
+  
+} */
+
+
+/* ------------ SELECT CSS -------------- */
+
+/* .form-type__selects {
+  
+} */
+
+.form-type__selects--2 {
+  display: none;
+}
+
+.form-type__select--add {
+  display: none;
+}
+
+.form-type__select--add.active {
+  display: unset;
+}
+
+.form-type__select--edit {
+  display: none;
+}
+
+.form-type__select--edit.active {
+  display: unset;
+}
+
+/* .select__option {
+
+} */
+
+
+/* --------------- ADD OR EDIT CSS -------------- */
+
+.add-or-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 500px;
+    margin: 5rem auto;
+}
+
+.add-or-edit__form {
+    width: 300px;
+    padding: 1rem;
+    border: 3px solid darkslategray;
+    background-color: var(--background-color-4);
+}
+
+
+
+.add-or-edit__form__label {
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+.add-or-edit__form__field {
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+/* ---------------  error handling styling below ---------------  */
+
+.form__small {
+    font-size: 0.83rem;
+    color: var(--text-muted);
+  }
+  
+  .form__link {
+    text-decoration: none;
+    color: var(--accent-colour);
+  }
+  
+  .form__link:hover {
+    color: #d05656;
+  }
+  
+  .form__error {
+    margin-top: 0.5rem;
+  }
+  
+  .form__error,
+  .form__flash {
+    display: block;
+    padding: 0.5rem;
+    color: var(--text);
+  }
+  
+  .form__error,
+  .form__flash--danger {
+    background: var(--accent-colour);
+  }
+  
+  .form__flash {
+    margin: 0.5rem;
+  }
+  
+  .form__flash--success {
+    background: var(--accent-colour-2);
+  }

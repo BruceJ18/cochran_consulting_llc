@@ -1,0 +1,25 @@
+{% extends "/web_app_mods/add_or_edit.html" %}
+
+
+
+{% block form_type %}
+<form action="" name="add-or-edit__form" method="post" novalidate class="add-or-edit__form">
+    <section class="form__container">
+        
+
+        {{ iter_fields(forms[1]) if form_type_add == 'employees' }}
+        {{ iter_fields(forms[2]) if form_type_add == 'businesses' }}
+        {{ iter_fields(forms[3]) if form_type_add == 'real_estate' }}
+
+
+       
+
+    </section>
+</form>
+{% endblock %}
+    
+
+    
+
+            
+       

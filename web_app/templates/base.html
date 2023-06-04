@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Mid-Market M&A Consulting Agency | Cochran Consulting LLC</title>
+    <!-- overall css -->
+    <link rel="icon" type="png" href="/static/images/ccllc_logo.png" sizes="52x52">
+    <link rel="stylesheet" href="../static/css/normalize.css"/> 
+    <link rel="stylesheet" href="../static/css/body/body.css"/>
+
+    <!-- header CSS -->
+    <link rel="stylesheet" href="../static/css/body/header/company.css"/>
+    <link rel="stylesheet" href="../static/css/body/header/navigation.css">
+    <link rel="stylesheet" href="../static/css/body/header/socials.css">
+    <!-- main CSS -->
+    <link rel="stylesheet" href="../static/css/body/main/e-square.css">
+    <link rel="stylesheet" href="../static/css/body/main/form.css">
+    <link rel="stylesheet" href="../static/css/body/main/blockquote.css">
+    <link rel="stylesheet" href="../static/css/body/main/testimonials&businesses.css">
+    <link rel="stylesheet" href="../static/css/body/main/books.css">
+    <!-- footer CSS -->
+    <link rel="stylesheet" href="../static/css/body/footer/footer-info.css">
+
+    <!-- google and font awsome font links -->
+    <link 
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link 
+    rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+
+
+    {% block head %}
+    {% endblock %}
+
+
+</head>
+<body>
+    <header>
+        <section id="company">
+            <a class="header-left__anchor" href="{{ url_for('index') }}">
+            <img id="logo" src="../static/images/ccllc_logo.png" alt="Cochran Consulting LLC logo"/>
+            </a>
+            <section id="sub-name"><h1>Cochran </h1><p id="subtitle">Consulting, llc</p></section>
+        </section>
+        <section>
+            <nav id="navigation-bar">
+                <div class="dropdown hide" data-dropdown>
+                    <button class="link" data-dropdown-button>About Us</button>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="{{ url_for('our_team') }}">Our Team</a></li>
+                            <li><a href="{{ url_for('mindset') }}">Our Company Mindest</a></li>
+                            <li><a href="">E4 Mathlosophy</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown hide" data-dropdown>
+                    <button class="link" data-dropdown-button>Listings</button>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="{{ url_for('business_listings_1') }}">Business Listings</a></li>
+                            <li><a href="{{ url_for('real_estate_listings') }}">Real Estate Listings</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown hide" data-dropdown>
+                    <button class="link" data-dropdown-button>Resources</button>
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="">Z-Score</a></li>
+                            <li><a href="">Excecutive Coaching Model</a></li>
+                            <li><a href="">Our Non-Profits</a></li>
+                            <li><a href="">Our Books</a></li>
+                            <li><a href="{{ url_for('add_or_edit') }}">Login</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown hide">
+                    <button class="link last"><a href="">Contact</a></button>
+                </div>
+<!-- ------------------------------------ bar menu ----------------------------------------- -->
+                
+                <div class="dropdown" data-dropdown id="bar" >
+                    <button class="link material-symbols-outlined resize" data-dropdown-button>menu</button>
+
+                        <div class="dropdown-menu bars">
+                            <ul>
+                                <li>
+                                    <div class="dropdown-2" data-dropdown-2>
+                                    <button class="link inner" data-dropdown-button-2>About Us</button>
+                                    <div class="dropdown-menu two">
+                                        <ul>
+                                            <li  ><a href="">Our Company Mindest</a></li>
+                                            <li ><a href="">E4 Mathlosophy</a></li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-2" data-dropdown-2>
+                                    <button class="link inner" data-dropdown-button-2>Listings</button>
+                                    <div class="dropdown-menu two">
+                                        <ul>
+                                            <li ><a href="">Business Listings 1</a></li>
+                                            <li ><a href="">Real Estate Listings</a></li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-2" data-dropdown-2>
+                                    <button class="link inner" data-dropdown-button-2>Resources</button>
+                                    <div class="dropdown-menu two">
+                                        <ul>
+                                            <li ><a href="">Z-Score</a></li>
+                                            <li><a href="">Excecutive Coaching Model</a></li>
+                                            <li><a href="">Our Non-Profits</a></li>
+                                            <li><a href="">Our Books</a></li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-2" data-dropdown-2>
+                                    <button class="link inner" data-dropdown-button-2><a href="">Contact</a></button>
+                                    
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                </div>
+                
+
+            </nav>
+        </section>
+        <section>
+        <ul id="socials">
+            <li>
+            <a href="https://www.facebook.com/ccochranconsulting" target="_blank">
+                    <i class="fab fa-facebook-f f icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/ccochranconsulting/" target="_blank">
+                    <i class="fab fa-instagram i icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/ccochranconsulting" target="_blank">
+                    <i class="fab fa-linkedin-in l icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@dr.curtisc.cochran8797" target="_blank">
+                    <i class="fab fa-youtube y icon"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.amazon.com/s?i=digital-text&rh=p_27%3ADr.+Curtis++C.+Cochran+&s=relevancerank&text=Dr.+Curtis++C.+Cochran+&ref=dp_byline_sr_ebooks_1" target="_blank">
+                    <i class="fab fa-amazon a icon"></i>
+                </a>
+            </li>
+        </ul>
+        </section>
+    </header>
+    
+
+        {% block main_content %}
+        {% endblock %}
+
+    
+    
+    <footer>
+        <article>
+            <a href="mailto:curtis@ccochranconsulting.com">
+                <i class="material-icons">email</i>
+                <span>curtis@ccochranconsulting.com</span>
+            </a>
+        </article>
+        <article>
+            <a href="https://www.google.com/maps/place/5198+Arlington+Ave+Suite+%23617,+Riverside,+CA+92504/@33.9446269,-117.415647,17z/data=!3m1!4b1!4m6!3m5!1s0x80dcb103cbfe7829:0x62172adb09f916a4!8m2!3d33.9446269!4d-117.415647!16s%2Fg%2F11rnf9wf6v" target="_blank">
+                <i class="material-icons">place</i>
+                <span>5198 Arlington Avenue Suite #617 Riverside, CA 92504</span>
+            </a>  
+        </article>
+        <article>
+            <a href="tel:19512377234">
+                <i class="material-icons">phone</i>
+                <span>951.237.7234</span>
+            </a>
+        </article>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="{{ url_for('static', filename='scripts/navDropDownMenus.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/eSquare.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/ajax.js') }}"></script>
+</body>
+</html>

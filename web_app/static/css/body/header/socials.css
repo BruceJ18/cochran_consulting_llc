@@ -1,0 +1,53 @@
+
+header section:last-of-type {
+    grid-column: 1 / -1;
+}
+
+#socials {
+    display: flex;
+
+    height: 3rem;
+
+    padding-right: 3.9rem;
+
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    
+    list-style: none;
+    color: whitesmoke;
+    background-color: var(--background-color-3);
+    border-top: 1rem solid darkslategray;
+}
+
+.icon {
+    color: whitesmoke;
+    font-size: 1.5rem;
+}
+
+.f:hover {
+    color: rgb(31, 31, 211);
+}
+
+.i:hover {
+    color: orchid;
+}
+
+.l:hover {
+    color: lightskyblue;
+}
+
+.y:hover {
+    color: red;
+}
+
+.a:hover {
+    color: goldenrod;
+}
+
+#socials li {
+    margin-left: 1rem;
+    padding-left: 40px;
+}
+

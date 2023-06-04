@@ -1,0 +1,9 @@
+{% macro iter_fields(form) %}
+{% from "/utilities/macros/fields/render_field.jinja2" import render_field %}
+
+    {{ form.hidden_tag() }}
+     {% for field in form if field.widget.input_type != 'hidden' %}
+               {{ render_field(field) }}
+    {% endfor %}
+
+{%endmacro%}

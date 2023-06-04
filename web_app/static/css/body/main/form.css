@@ -1,0 +1,404 @@
+
+#form {
+    display: grid;
+
+    width: 100%;
+    height: 100%;
+
+    grid-template-rows: 4% 28% 68%;
+    justify-content: center;
+    align-items: center;
+    
+    border: 2px solid var(--background-color-3);
+    background-color: var(--background-color-2);
+}
+
+#form-title {
+    box-sizing: border-box;
+    grid-column: 1 / -1;
+    text-align: center;
+    
+    height: 100%;
+
+    margin: 0;
+    padding-top: 3px;
+
+    color: whitesmoke;
+    background-color: var(--background-color-3);
+    border: 3px solid var(--background-color-4);
+}
+
+#who { 
+    display: grid;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 99%;
+
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    grid-row: 2;
+}
+
+#frame {
+    box-sizing: border-box;
+
+    width: 80%;
+    height: 82%;
+
+    margin: 0;
+
+    border: 1px solid var(--background-color-3);
+    border-radius: 2%;
+}
+
+#cochran {
+    box-sizing: border-box;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: inherit;
+}
+
+figcaption {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: small;
+}
+
+#business-info {
+    text-align: left;
+
+    width: 80%;
+    height: 80%;
+
+    padding: 0.5rem;
+    margin-right: 1.5rem;
+
+    color: rgb(209, 209, 209);
+    font-size: 1.2rem;
+    font-family: sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+    
+    border: 1px solid var(--background-color-3);
+    background-color: var(--background-color-2);
+    
+}
+
+
+/* user info filling in section */
+
+#fill-in {
+    grid-row: 3 / -1;
+
+    font-family: sans-serif, 'Segoe UI', Tahoma, Verdana;
+    font-weight: bold;
+}
+
+#label-container { padding: 0 1rem; border: none; }
+
+.input-textarea-class {
+    display: block;
+
+    width: 100%;
+    height: 1.2rem;
+
+    margin: .25rem 0 .8rem 0;
+
+    background-color: rgba(255, 255, 255, 0.695);
+} 
+
+#questions-or-comments { height: unset; }
+
+.required { color: rgb(157, 8, 8); }
+
+#submit {
+    display: block;
+    
+    width: 60%;
+    height: 1.8rem;
+    margin: 0 auto;
+
+    background-color: slategray;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* side breakpoint modification */
+@media (max-width: 1846px) {
+    #business-info {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 1750px) {
+    #frame {
+        width: 83%;
+        height: 83%;
+    }
+
+    #fill-in {
+        font-size: medium;
+     }
+
+    #form {
+        width: 100%;
+        height: 100%;
+
+        grid-template-rows: 4% 27% 65%;
+    }
+
+    #business-info {
+        font-size: 1.03rem;
+    }
+
+    figcaption {
+        font-size: small;
+    }
+}
+
+@media (max-width: 1600px) {
+    #fill-in {
+        font-size: 0.89rem;
+     }
+}
+
+@media (max-width: 1580px) {
+
+    #business-info {
+        font-size: 1rem;
+    }
+
+    #frame {
+        width: 80%;
+        height: 80%;
+    }    
+
+    figcaption {
+        font-size: small;
+    }
+
+    #fill-in {
+        font-size: 0.95rem;
+     }
+
+    
+    #form {
+        width: 100%;
+        height: 100%;
+
+        grid-template-rows: 4% 28% 67.9%;
+        
+}
+}
+
+@media (max-width: 1554px) {
+
+    #business-info {
+        font-size: 1.2rem;
+    }
+
+    #frame {
+        width: 80%;
+        height: 80%;
+    }    
+
+    figcaption {
+        font-size: small;
+    }
+
+    #fill-in {
+        font-size: 0.95rem;
+     }
+
+    
+    #form {
+        width: 100%;
+        height: 100%;
+
+        grid-template-rows: 4% 28% 67.9%;
+        
+}
+}
+
+@media (max-width: 1500px) {
+    #business-info {
+        font-size: 1.1rem;
+    }
+
+    #frame {
+        height: 85%;
+    }    
+
+    figcaption {
+        font-size: small;
+    }
+
+    #fill-in {
+        font-size: 0.78rem;
+     }
+
+    
+    #form {
+        width: 100%;
+        height: 100%;
+        
+}
+}
+
+@media (max-width: 1336px) {
+    #frame {
+        height: 85%;
+        width: 85%;
+    } 
+
+    #business-info {
+        font-size: 1.1rem;
+    }
+
+    #fill-in {
+        font-size: small;
+     }
+}
+/* minor breakpoint modification */
+@media (max-width: 1202px) {
+    #business-info {
+        font-size: 1.1rem;
+    }
+}
+
+/* minor breakpoint modification */
+@media (max-width: 1104px) {
+    #business-info {
+        font-size: 1rem;
+    }
+
+    #frame {
+        width: 90%;
+        height: 85%;
+    }   
+}
+
+/* main break point modification */
+@media (max-width: 1010px) {
+    #form {
+        grid-column: 2;
+        grid-row: 3;
+        width: 90%;
+        height: 100%;
+
+        grid-template-rows: 4% 27% 70%;
+        
+    }
+
+    #submit {
+        height: 50%;
+    }
+
+    #frame {
+        width: 70%;
+        height: 90%;
+    }
+
+    #who { 
+        width: 100%;
+        height: 100%;
+    }
+
+    #business-info {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* minor breakpoint modification */
+@media (max-width: 780px) {
+    #business-info {
+        font-size: 1.15rem;
+    }
+}
+
+
+/* minor breakpoint modification */
+@media (max-width: 750px) {
+    #form {
+        grid-column: 2;
+        grid-row: 3;
+
+        grid-template-rows: 4% 26% 72%;
+        
+    }
+
+    #frame {
+        width: 60%;
+        height: 86%;
+    }
+
+
+    #business-info {
+        font-size: 1.1rem;
+    }
+}
+
+/* minor breakpoint modification */
+@media (max-width: 700px) {
+    #frame {
+        width: 70%;
+        height: 86%;
+    }
+}
+
+@media (max-width: 650px) {
+    #form {
+        grid-column: 2;
+        grid-row: 3;
+
+        grid-template-rows: 4% 26% 72%;
+        
+    }
+
+    figcaption {
+        font-size: 80%;
+    }
+
+    #submit {
+        height: 50%;
+    }
+
+    #frame {
+        width: 70%;
+        height: 85%;
+    }
+
+    #business-info {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 625px) {
+    #business-info {
+        font-size: 1rem;
+    }
+
+    #frame {
+        width: 80%;
+        height: 85%;
+    }
+
+}
+
+
+/* minor breakpoint modification */
+@media (max-width: 500px) {
+
+    #frame {
+        width: 85%;
+        height: 88%;
+    }
+
+    #business-info {
+        font-size: 1rem;
+    }
+}
+

@@ -1,0 +1,12 @@
+{% macro render_field(field) %}
+<div class="add__form__group">
+    {% if field.label.text != 'Submit'  %}
+    {{ field.label(class_="add-or-edit__form__label")}}
+    {% endif %}
+    {{ field(class_="add-or-edit__form__field") }}
+
+    {% for error in field.error %}
+    <span class="form__error"> {{ error }} </span>
+    {% endfor %}
+</div>
+{% endmacro %}

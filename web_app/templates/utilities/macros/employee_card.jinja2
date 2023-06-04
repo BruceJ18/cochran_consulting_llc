@@ -1,0 +1,44 @@
+{% macro employee_card(employees) %}
+    {% for employee in employees %}
+    {% set employee_info = employee['info'] %}
+    <section class="employee_card">
+
+   
+    <img class="employee_card__img" src="/static/images/our_team/team_image_{{ employee_info['id'] }}.png"/>
+
+    
+    <h2>{{ employee_info['name'] }}</h2>
+    <h3>
+    {% set len_of_employee_positions_info = employee_info['positions'] | length %}
+    {% for position in range(len_of_employee_positions_info) %}
+    {{ employee_info['positions'][position] + (" | " if position < len_of_employee_positions_info - 1 else '') }}
+    {% endfor %}
+    
+    </h3>
+
+    <p class="employee_card__info">
+    {{ employee_info['background'] }}
+    </p>
+
+    <ul class="employee_card__socials">
+        <li>
+            <a href="tel:19512377234">
+                <i class="material-icons employee_card__icon phone">phone</i>
+            </a>
+        </li>
+        <li>
+            <a href="mailto:curtis@ccochranconsulting.com">
+                <i class="material-icons employee_card__icon email">email</i>
+            </a>
+        </li>
+        <li>
+            <a  href="{{ employee_info['linkedin'] }}" target="_blank">
+                <i class="fab fa-linkedin-in l icon"></i>
+            </a>
+        </li>
+    </ul>
+
+    </section>
+    {% endfor %}
+
+{% endmacro %}

@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <main class="main__index">
+    <article id="e-square-background">
+        <section id="e-square">
+
+            <h2 class="e1-info-title position">Entering</h2>
+            <p class="e-info-background" id="e1-background-info">
+                Entrepreneurs considering Entering business ownership were previously known as
+                buyers. We now refer to them as Entering entrepreneurs because there are many effective
+                opportunities to become the owner of a business in addition to buying a business.
+            </p>
+
+            <h2 class="e2-info-title position">Evaluating</h2>
+            <p class="e-info-background" id="e2-background-info">
+                
+                A successful Business Enhancement Plan
+                is the plan of action that accomplishes the needed objectives indicated in the 
+                Evaluation Report. Our Primary Business Consultant will lead in the design of 
+                this plan and monitor each step in the accomplishment of increased cash flow.
+            </p>
+
+            <h2 class="e3-info-title position">Enhancing</h2>
+            <p class="e-info-background" id="e3-background-info">
+                <ul id="e3-list">
+                    <li>Understand Business Value</li>
+                    <li>Present Value of Future Earnings</li>
+                    <li>Gross Revenue Multiples</li>
+                    <li>Capitalization of Excess Earnings</li>
+                    <li>Fair Market Value</li>
+                </ul>
+            </p>
+
+            <h2 class="e4-info-title position">Exiting</h2>
+            <p class="e-info-background" id="e4-background-info">     
+                At some point, the owner of every business will consider 
+                an Exit Strategy to cash in on years of hard work and investment. 
+                If you have a current interest in Exiting your business, or 
+                considering maximizing the value of your business for a future 
+                Exit, this is an excellent time to make your move.
+            </p>
+
+            <div class="e-div e1"><img class="e" src="../static/images/e1.png" alt="image with e raised 1"></div>
+            <div class="e-div e2"><img class="e" src="../static/images/e2.png" alt="image with e and 2"></div>
+            <div class="e-div e3"><img class="e" src="../static/images/e3.png" alt="image with e and 3"></div>
+            <div class="e-div e4"><img class="e" src="../static/images/e4.png" alt="image with e and 4"></div>               
+        </section>
+
+        <section id="e-square-subtext-section">
+        <hr class="hr1">
+        <p id="first-paragraph">
+            Our Consulting and Executive Coaching Firm is a middle market 
+            Mergers & Acquisitions Firm specializing in Businesses from 
+            $500,000 to $50,000,000 in assets. We serve Entrepreneurs by 
+            facilitating the 4 stages of Business Ownership: Entering, Evaluating, 
+            Enhancing, and Exiting. Whether you are our Entering or Exiting Client,
+            we have a fiduciary duty to you, your family and your business. 
+        </p>
+        <p> 
+            Each step of your business ownership cycle is important. However, the balance that
+            comes from the un-compromised coordination of all four steps can bring you
+            success. Whether your goal is financial independence when you Exit your
+            business or expanding business with profits, this is what we do best.
+            Earn more, keep more, we will help you explore your options in all phases
+            of business ownership.  
+        </p>
+        <hr class="hr2">
+    </section>
+    </article>
+    <article id="form">
+        <h2 id="form-title">TALK TO AN EXPERT</h2>
+        <section id="who">
+            
+            <figure id="frame">
+                <img id="cochran" src="../static/images/cc-ceo.png" 
+                alt="image of a man named Dr.Cochran">
+                <figcaption>Dr. Cochran, PH.D, MBA</figcaption>
+            </figure>
+            <p id="business-info">Only companies with annual revenues of $500,000 to 
+                $100 Million, please. Call Dr. Curtis Cochran, CEO & President 
+                951.237.7234 or complete the form below.
+            </p>
+        </section>
+        <section id="fill-in">
+            <!-- must get database to store form "fill-in" information -->
+            <form action="" method="post">
+                <fieldset id="label-container"> 
+                    <label for="contact-name" class="label-form-info">Contact Name <em class="required">*</em> 
+                        <input required class="input-textarea-class" id="contact-name" name="contact-name" type="text">
+                    </label>
+                    <label for="business-name" class="label-form-info">Business Name<em class="required">*</em>
+                        <input required class="input-textarea-class" id="business-name" name="business-name" type="text">
+                    </label>
+                    <label for="email" class="label-form-info">Email<em class="required">*</em> 
+                        <input required class="input-textarea-class" id="email" name="email" type="email">
+                    </label>
+                    <label for="cell-number" class="label-form-info">Cell Number<em class="required">*</em> 
+                        <input required class="input-textarea-class" id="cell-number" name="cell-number" type="number">
+                    </label>
+                    <label for="website-address" class="label-form-info">Website Address<em class="required">*</em> 
+                        <input required class="input-textarea-class" id="website-address" name="website-address" type="url">
+                    </label>
+                    <label for="annual-revenue" class="label-form-info">Annual Revenue<em class="required">*</em> 
+                        <input required class="input-textarea-class"id="annual-revenue" name="annual-revenue" type="number" min="500,000" max="100,000,000">
+                    </label>
+                    <label for="questions-or-comments">Questions or Comments
+                        <textarea class="input-textarea-class" id="questions-or-comments" name="questions-or-comments" cols="30" rows="10"></textarea>
+                    </label>    
+                </fieldset>
+                <input id="submit" type="submit" value="Submit"> 
+            </form>
+        </section>
+    </article>
+    <blockquote id="blockquote">
+        <hr class="quote-hr">
+        <p id="quote">
+            "Plan ahead for success when Exiting your 
+            business, or plan for less than what you 
+            hoped for. Only the best prepared businesses 
+            will sell for top dollar."
+        </p>
+        <hr class="quote-hr">
+      </blockquote>
+    <section id="reviews-and-sold-background">
+        <article id="testimonials-article">
+            <h2 id="testimonials-title">Testimonials</h2>
+            <ul id="testimonials">
+                <li class="testimonial">
+                    "He knows what he is doing with these transactions."
+                    - <mark>Trent Westermeyer, BEST Realty Property Management, Inc.</mark>
+                </li>
+                <li class="testimonial">
+                    "A true exit strategy expert. I can't 
+                    recommend Curtis highly enough."
+                    - <mark>Chris Curtin, Bankers Factoring</mark>
+
+                </li>
+                <li class="testimonial">
+                    "Cochran Consulting helped us Enter 
+                    business ownership and Enhance our business. 
+                    We highly recommend their services!"
+                    - <mark>Nature's Healing LLC</mark>
+                </li>
+                <li class="testimonial">
+                    "I have known him since he was a teacher in high 
+                    school and he provides great consulting advice for your business." 
+                    - <mark>Michelle McDonnel IE Magazine</mark>
+                </li>
+            </ul>
+        </article>
+        <article id="businesses-article">
+            <h2 id="sold-title">Businesses Sold</h2>
+            <ul id="businesses">
+                <li class="business">Solar Sales & Installation Company</li>
+                <li class="business">Fence Contractor</li>
+                <li class="business">Food Truck Business</li>
+                <li class="business">Turnkey Donut Shop</li>
+                <li class="business">Established Auto Repair</li>
+            </ul>
+        </article>
+    </section>
+    <article id="books-background">
+        <h2 id="books-title">Our Books</h2>
+        <figure class="figures">
+            <img id="book-1" src="../static/images/cc-book-1.png" alt="The Semantics of Mathematics book image">
+            <div class="overlay">
+                <a href="https://www.amazon.com/Semantics-Mathematics-Business-Curtis-Cochran-ebook/dp/B08P659PYZ/ref=sr_1_3?keywords=dr+curtis+cochran&sr=8-3" target="_blank"><div class="text">Purchase</div></a>
+            </div>
+        </figure>
+        <figure class="figures">
+            <img id="book-2" src="../static/images/cc-book-2.png" alt="Metaphysics in Business book image">
+            <div class="overlay">
+                <a href="https://www.amazon.com/Metaphysics-Business-Dr-Curtis-Cochran-ebook/dp/B01NASNX52/ref=sr_1_1?keywords=dr+curtis+cochran&sr=8-1" target="_blank"><div class="text">Purchase</div></a>
+            </div>
+        </figure>
+        <figure class="figures">
+            <img id="book-3" class="smaller-book" src="../static/images/cc-book-3.png" alt="Mathematics and the Metaphysical regression of Human Knowledge book image">
+            <div class="overlay">
+                <a href="https://www.amazon.com/MATHEMATICS-METAPHYSICAL-REGRESSION-HUMAN-KNOWLEDGE-ebook/dp/B06XJX7FFD/ref=sr_1_7?keywords=dr+curtis+cochran&sr=8-7" target="_blank"><div class="text">Purchase</div></a>
+            </div>
+        </figure>
+        <figure class="figures">
+            <img id="book-4" src="../static/images/cc-book-4.png" alt="Reaching Wealth book image">
+            <div class="overlay">
+                <a href="https://www.amazon.com/Reaching-Wealth-Through-Executive-Coaching-ebook/dp/B0B5PM6489/ref=sr_1_2?keywords=Dr+curtis+c+cochran&sr=8-2" target="_blank"><div class="text">Purchase</div></a>
+            </div>
+        </figure>
+    </article>
+</main>
+
+{% endblock %}

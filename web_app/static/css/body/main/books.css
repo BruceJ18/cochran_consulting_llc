@@ -1,0 +1,302 @@
+
+#books-background {
+    display: grid;
+    grid-column: 3;
+    grid-row: 3;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 6.8% repeat(2, 45%);
+    justify-items: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: darkslategray;
+    border: 1px solid var(--background-color-3);
+}
+
+#books-title {
+    box-sizing: border-box;
+
+    grid-column: 1 / 3;
+
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    
+    background-color: var(--background-color-3);
+    border: var(--background-color-2) 3px solid;
+}
+
+#books-background figure {
+    width: 90%;
+    height: 90%;
+
+    margin: 0;
+
+    border: 1px var(--background-color-4) solid;
+    border-radius: 3%;
+    background-color: var(--background-color-4);
+}
+
+#books-background figure:nth-of-type(2n-1) {
+    margin-left: 8px;
+}
+
+#books-background figure:nth-of-type(2n) {
+    margin-right: 8px;
+}
+
+#books-background figure img {
+    position: relative;
+    left: 25%;
+    top: 9%;
+    padding: 3px;
+    background-color: var(--background-color-3);
+}
+
+#book-1 {
+    width: 50%;
+    height: 80%;
+}
+
+#book-2 {
+    width: 50%;
+    height: 80%;
+}
+
+#book-3 {
+    width: 50%;
+    height: 80%;
+}
+
+#book-4 {
+    width: 50%;
+    height: 80%;
+}
+
+.overlay {
+    position: relative;
+    bottom: 85.3%;
+
+    height: 100%;
+    width: 100%;
+
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--background-color-3);
+    border-radius: 2%;
+    
+  }
+
+.figures:hover .overlay {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    padding: 3% 7%;
+
+    color: white;
+    font-size: 20px;
+    
+    border: 3px white solid;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+
+  @media (max-width: 1554px) {
+    #books-background {
+        height: 90%;
+    }
+
+    #books-title {
+        font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 1270px) {
+    .overlay {
+        position: relative;
+        bottom: 76.99%;
+      }
+
+
+    #book-1 { 
+        height: 7rem;
+        width: 5.5rem;
+    }
+    
+    #book-2 {
+        height: 7rem;
+        width: 5.5rem;
+    }
+    
+    #book-3 { 
+        height: 7rem;
+        width: 5.5rem;
+    }
+    #book-4 {
+        height: 7rem;
+        width: 5.5rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .overlay {
+        position: relative;
+        bottom: 78.34%;
+      }
+    }
+
+  @media (max-width: 1104px) {
+    .overlay {
+        position: relative;
+        bottom: 76.99%;
+      }
+
+
+    #book-1 { 
+        height: 70%;
+    }
+    
+    #book-2 {
+        height: 70%;
+    }
+    
+    #book-3 { 
+        height: 70%;
+    }
+    #book-4 {
+        
+        height: 70%;
+    }
+  }
+
+  @media (max-width: 1010px) {
+    #books-background {
+        grid-row: 6;
+        grid-column: 2;
+        width: 70%;
+    }
+
+    #books-background figure {
+        width: 89%;
+    }
+    #books-background figure img {
+        left: 30%;
+    }
+
+    .overlay {
+        position: relative;
+        bottom: 76.99%;
+
+      }
+
+
+    #book-1 { 
+        height: 70%;
+        width: 30%;
+    }
+    
+    #book-2 {
+        height: 70%;
+        width: 30%;
+    }
+    
+    #book-3 { 
+        height: 70%;
+        width: 30%;
+    }
+    #book-4 {
+        height: 70%;
+        width: 30%;
+    }
+  }
+
+  @media (max-width: 1010px) {
+    #books-background {
+        grid-row: 6;
+        grid-column: 2;
+        width: 70%;
+    }
+
+    #books-background figure {
+        width: 89%;
+    }
+    #books-background figure img {
+        left: 30%;
+    }
+
+    #book-1 { 
+        height: 70%;
+        width: 40%;
+    }
+    
+    #book-2 {
+        height: 70%;
+        width: 40%;
+    }
+    
+    #book-3 { 
+        height: 70%;
+        width: 40%;
+    }
+    #book-4 {
+        height: 70%;
+        width: 40%;
+    }
+  }
+
+  @media (max-width: 550px) {
+    #books-background {
+        grid-row: 6;
+        grid-column: 2;
+        width: 90%;
+    }
+
+    #books-background figure {
+        width: 85%;
+    }
+    #books-background figure img {
+        left: 30%;
+    }
+
+    .overlay {
+        position: relative;
+        bottom: 76.99%;
+
+      }
+
+
+    #book-1 { 
+        height: 70%;
+        width: 40%;
+    }
+    
+    #book-2 {
+        height: 70%;
+        width: 40%;
+    }
+    
+    #book-3 { 
+        height: 70%;
+        width: 40%;
+    }
+    #book-4 {
+        height: 70%;
+        width: 40%;
+    }
+  }
