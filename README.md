@@ -1,8 +1,9 @@
 # Cochran Consulting LLC Web App
-Static front-end web application development &amp; deployment to cloud for local business.
 
-Used AWS s3 to store front-end programs but to keep a secure connection and have a low-latency benefit to
-visitors of the web app I utilized cloud front and created a distribution with an origin connection to my s3 bucket containing all the web apps code. 
+New repository of Cochran Consulting LLC web application due to some sort of data corruption or
+"bad tree object.".
 
-My s3 bucket also needed bucket policy to allow a cloud front distribution to access all objects within my bucket. 
-As well as using origin access controls to restrict access to my s3 bucket objects (origin).
+In a way this is perfect because in my last repo I used AWS S3 and a Cloudfront Distribution to deploy only the front end.
+I can now utilize an AWS EC2 instance, choosing the appropriate image, along with a AWS ELB and a Amazon NoSQL database to deploy this
+full stack web app.
+
