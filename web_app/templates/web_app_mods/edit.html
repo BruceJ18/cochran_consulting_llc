@@ -3,13 +3,10 @@
 
 
 {% block form_type %}
-<form action="" name="add-or-edit__form" method="post" novalidate class="add-or-edit__form">
+<form action="{{ url_for('edit') }}" name="add-or-edit__form" method="post" novalidate class="add-or-edit__form">
     <section class="form__container">
         
-        {{ iter_fields(forms[0]) if form_type_edit == 'clients' }}
-        {{ iter_fields(forms[1]) if form_type_edit == 'employees' }}
-        {{ iter_fields(forms[2]) if form_type_edit == 'businesses' }}
-        {{ iter_fields(forms[3]) if form_type_edit == 'real_estate' }}
+        {{ iter_fields(form) }}
 
         
 

@@ -7,6 +7,7 @@ from wtforms import (
     )
 from wtforms.validators import InputRequired, NumberRange, Length
 
+
 class Client_Form(FlaskForm):
     client_name = StringField("Client Name", validators=[InputRequired()])
     business_name = StringField("Business Name",  validators=[InputRequired()])
