@@ -6,21 +6,20 @@
     <title>A Mid-Market M&A Consulting Agency | Cochran Consulting LLC</title>
     <!-- overall css -->
     <link rel="icon" type="png" href="/static/images/ccllc_logo.png" sizes="52x52">
-    <link rel="stylesheet" href="../static/css/normalize.css"/> 
-    <link rel="stylesheet" href="../static/css/body/body.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css' ) }}"/> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/body.css') }}"/>
 
     <!-- header CSS -->
-    <link rel="stylesheet" href="../static/css/body/header/company.css"/>
-    <link rel="stylesheet" href="../static/css/body/header/navigation.css">
-    <link rel="stylesheet" href="../static/css/body/header/socials.css">
-    <!-- main CSS -->
-    <link rel="stylesheet" href="../static/css/body/main/e-square.css">
-    <link rel="stylesheet" href="../static/css/body/main/form.css">
-    <link rel="stylesheet" href="../static/css/body/main/blockquote.css">
-    <link rel="stylesheet" href="../static/css/body/main/testimonials&businesses.css">
-    <link rel="stylesheet" href="../static/css/body/main/books.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/header/company.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/header/navigation.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/header/socials.css') }}">
+
+    <!-- MAIN CSS BLOCK -->  
+    {% block head %}
+    {% endblock %}
+
     <!-- footer CSS -->
-    <link rel="stylesheet" href="../static/css/body/footer/footer-info.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/footer/footer-info.css') }}">
 
     <!-- google and font awsome font links -->
     <link 
@@ -36,8 +35,7 @@
     />
 
 
-    {% block head %}
-    {% endblock %}
+    
 
 
 </head>
@@ -45,7 +43,7 @@
     <header>
         <section id="company">
             <a class="header-left__anchor" href="{{ url_for('index') }}">
-            <img id="logo" src="../static/images/ccllc_logo.png" alt="Cochran Consulting LLC logo"/>
+            <img id="logo" src="{{ url_for('static', filename='images/ccllc_logo.png') }}" alt="Cochran Consulting LLC logo"/>
             </a>
             <section id="sub-name"><h1>Cochran </h1><p id="subtitle">Consulting, llc</p></section>
         </section>
