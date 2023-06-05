@@ -1,5 +1,13 @@
 {% extends "base.html" %}
 
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/e-square.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/form.css') }}">
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/body/main/blockquote.css') }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/testimonials&businesses.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/books.css') }}">
+{% endblock %}
+
 {% block main_content %}
     <main class="main__index">
     <article id="e-square-background">
