@@ -28,11 +28,10 @@ load_dotenv()
 app = Flask(__name__)
 client = MongoClient(os.environ.get("MONGODB_URI"))
 app.db = client.get_default_database()
+app.secret_key = os.environ.get('SECRET_KEY', 'dev')
 
 
 
-
-app.config['SECRET_KEY'] = 'any secret string'
 # homepage route
 
 
