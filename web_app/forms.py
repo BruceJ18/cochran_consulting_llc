@@ -7,9 +7,8 @@ from wtforms import (
     )
 from wtforms.validators import InputRequired, NumberRange, Length
 
-
-class Client_Form(FlaskForm):
-    client_name = StringField("Client Name", validators=[InputRequired()])
+class Client_form_index(FlaskForm):
+    name = StringField("Client Name", validators=[InputRequired()])
     business_name = StringField("Business Name",  validators=[InputRequired()])
     email = EmailField("Email", validators=[InputRequired("Please enter your email address.")])
     cell_number = IntegerField("Cell",  validators=[InputRequired()])
@@ -24,8 +23,14 @@ class Client_Form(FlaskForm):
         message="Only companies with annual revenues between $500,000 to $50,000,000"
         )])
     questions_or_comments = TextAreaField("Questions or Comments", validators=[InputRequired()])
-    submit = SubmitField("Submit",  validators=[InputRequired()])
+    submit = SubmitField("Submit")
+    delete = StringField("Type in 'Delete' to delete entity: ")
 
+
+class Client_Form(Client_form_index):
+    id = IntegerField("id", validators=[InputRequired()])
+    
+    
 
 class StringListField(TextAreaField):
 
@@ -51,15 +56,17 @@ class Employee_Form(FlaskForm):
     positions = StringListField("Positions:")
     linkedin = URLField("Linkedin:")
     submit = SubmitField("Submit")
+    delete = StringField("Type in 'Delete' to delete entity: ")
 
 
 class Business_Form(FlaskForm):
     id = IntegerField("id", validators=[InputRequired()])
     name = StringField("Business Name")
     business_desc = TextAreaField("Description")
-    link = URLField("Linkedin")
     sold = BooleanField("Sold")
+    link = URLField('Link')
     submit = SubmitField("Submit",  validators=[InputRequired()])
+    delete = StringField("Type in 'Delete' to delete entity: ")
 
 
 
@@ -72,3 +79,4 @@ class Real_Estate_Form(FlaskForm):
     sqft = IntegerField("Sqft")
     sold = BooleanField("Sold")
     submit = SubmitField("Submit",  validators=[InputRequired()])
+    delete = StringField("Type in 'Delete' to delete entity: ")

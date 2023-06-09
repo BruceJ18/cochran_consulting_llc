@@ -1,6 +1,6 @@
 {% macro render_field(field) %}
 <div class="add__form__group">
-    {% if field.label.text != 'Submit'  %}
+    {% if field.label.text != 'Submit' and field.label.text != 'Delete'   %}
     {{ field.label(class_="add-or-edit__form__label")}}
     {% endif %}
     {{ field(class_="add-or-edit__form__field") }}
