@@ -3,14 +3,12 @@
 
 
 {% block form_type %}
-<form action="{{ url_for('add') }}" name="add-or-edit__form" method="post" novalidate class="add-or-edit__form">
+<form action="{{ url_for('add', mod_selection=mod_selection, selected_form_add=selected_form_add ) }}"  name="add-or-edit__form" method="post" novalidate class="add-or-edit__form">
     <section class="form__container">
         
 
         {{ iter_fields(form) }}
 
-
-       
 
     </section>
 </form>

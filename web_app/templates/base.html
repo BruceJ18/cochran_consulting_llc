@@ -54,9 +54,7 @@
                     <div class="dropdown-menu">
                         <ul>
                             <li><a href="{{ url_for('our_team') }}">Our Team</a></li>
-                            <li><a href="{{ url_for('mindset') }}">Our Company Mindest</a></li>
-                            <li><a href="">E4 Mathlosophy</a></li>
-
+                            <li><a href="{{ url_for('our_company_mindset') }}">Our Company Mindest</a></li>
                         </ul>
                     </div>
                 </div>
@@ -74,7 +72,6 @@
                     <div class="dropdown-menu">
                         <ul>
                             <li><a href="">Z-Score</a></li>
-                            <li><a href="">Excecutive Coaching Model</a></li>
                             <li><a href="">Our Non-Profits</a></li>
                             <li><a href="">Our Books</a></li>
                             <li><a href="{{ url_for('add_or_edit') }}">Login</a></li>
@@ -97,8 +94,9 @@
                                     <button class="link inner" data-dropdown-button-2>About Us</button>
                                     <div class="dropdown-menu two">
                                         <ul>
-                                            <li  ><a href="">Our Company Mindest</a></li>
-                                            <li ><a href="">E4 Mathlosophy</a></li>
+                                            <li><a href="{{ url_for('our_team') }}">Our Team</a></li>
+                                            <li><a href="">Our Company Mindest</a></li>
+                                            
                                         </ul>
                                     </div>
                                     </div>
@@ -120,7 +118,7 @@
                                     <div class="dropdown-menu two">
                                         <ul>
                                             <li ><a href="">Z-Score</a></li>
-                                            <li><a href="">Excecutive Coaching Model</a></li>
+                
                                             <li><a href="">Our Non-Profits</a></li>
                                             <li><a href="">Our Books</a></li>
                                         </ul>
@@ -199,9 +197,12 @@
         </article>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    
+
+    
     <script src="{{ url_for('static', filename='scripts/navDropDownMenus.js') }}"></script>
-    <script src="{{ url_for('static', filename='scripts/eSquare.js') }}"></script>
-    <script src="{{ url_for('static', filename='scripts/add_or_edit.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
+    
 </body>
 </html>

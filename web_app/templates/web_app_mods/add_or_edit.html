@@ -29,7 +29,7 @@
                 <section class="form-type__selects">
 
                  <!--  ------------      first select elements -> below      -------------- -->
-                    <!-- (only one will render based on input above)  -->
+                    <!-- (only one select element will render based on input above)  -->
                     
                     <label for="form-type__select--add"></label>
                     <select class="form-type__select--add" name="select--add" id="form-type__select--add" >
@@ -80,4 +80,9 @@
 
     </section>
 </main>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script src="{{ url_for('static', filename='scripts/inputElementsLogic.js') }}"></script>
 {% endblock %}
