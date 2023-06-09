@@ -4,7 +4,8 @@ from datetime import datetime
 
 @dataclass
 class Client:
-    client_name: str 
+    id: int
+    name: str 
     business_name: str 
     email: str
     cell_number: str
