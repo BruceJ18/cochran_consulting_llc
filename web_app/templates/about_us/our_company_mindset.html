@@ -1,6 +1,202 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/our_company_mindset/ocm_main_content.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/e-square.css') }}">
+{% endblock %}
+
 
 
 {% block main_content %}
+<main class="ocm__main">
+    <section class="ocm__title js-scroll">
+        <img class="title__logo" src="{{ url_for('static', filename='images/e4-logo.png') }}" alt="">
+        <h1 class="title__h1">
+            Mathlosophy
+        </h1>
+    </section>
+
+    
+
+
+    <section class="ocm__e4" >
+
+        <section class="ocm__esquare--background">
+            <section class="ocm" id="e-square">
+                <h2 class="e1-info-title position">Entering</h2>
+                <p class="e-info-background" id="e1-background-info">
+                    Entrepreneurs considering Entering business ownership were previously known as
+                    buyers. We now refer to them as Entering entrepreneurs because there are many effective
+                    opportunities to become the owner of a business in addition to buying a business.
+                </p>
+                <h2 class="e2-info-title position">Evaluating</h2>
+                <p class="e-info-background" id="e2-background-info">
+            
+                    A successful Business Enhancement Plan
+                    is the plan of action that accomplishes the needed objectives indicated in the
+                    Evaluation Report. Our Primary Business Consultant will lead in the design of
+                    this plan and monitor each step in the accomplishment of increased cash flow.
+                </p>
+                <h2 class="e3-info-title position">Enhancing</h2>
+                <p class="e-info-background" id="e3-background-info">
+                    <ul id="e3-list">
+                        <li>Understand Business Value</li>
+                        <li>Present Value of Future Earnings</li>
+                        <li>Gross Revenue Multiples</li>
+                        <li>Capitalization of Excess Earnings</li>
+                        <li>Fair Market Value</li>
+                    </ul>
+                </p>
+                <h2 class="e4-info-title position">Exiting</h2>
+                <p class="e-info-background" id="e4-background-info">
+                    At some point, the owner of every business will consider
+                    an Exit Strategy to cash in on years of hard work and investment.
+                    If you have a current interest in Exiting your business, or
+                    considering maximizing the value of your business for a future
+                    Exit, this is an excellent time to make your move.
+                </p>
+                <div class="e-div e1"><img class="e" src="../static/images/e1.png" alt="image with e raised 1"></div>
+                <div class="e-div e2"><img class="e" src="../static/images/e2.png" alt="image with e and 2"></div>
+                <div class="e-div e3"><img class="e" src="../static/images/e3.png" alt="image with e and 3"></div>
+                <div class="e-div e4"><img class="e" src="../static/images/e4.png" alt="image with e and 4"></div>
+            </section>
+        </section>
+
+
+
+<section class="ocm__quotes">
+    
+            <section class="ocm__quote">
+            <hr>
+                <p class="quote">
+                    Our E4 Mathlosophy runs with a Culture that Empowers Leaders & Organizations. E4 Cultures Are Driven By Teams That
+                    Create & Deliver Disruptive Solutions Fast While Embracing Learning & Continuous
+                    Improvement.
+                    </p>
+                <hr>
+            </section>
+            <section class="ocm__quote">
+                <hr>
+                    <p class="quote">
+                        This E4 Culture is the inner workings of 
+                        making an E4 business strategy work. Which should
+                        be the end goal of any business owner.
+                        </p>
+                    <hr>
+                </section>
+                <section class="ocm__quote">
+                    <hr>
+                        <p class="quote">
+                            Ready to improve your business? Look at our Products 
+                            and services we offer below! 
+                            </p>
+                        <hr>
+                    </section>
+</section>
+        
+    </section>
+    <article class="ocm__products ">
+
+        <section class="products__backgrounds products__culture js-scroll--left">
+            <h2 class="cultures__titles">LEARN OUR E4 CULTURE</h2>
+            <article class="slide culture__slide">
+                <section class="culture__text">
+                    <ul class="culture__list">
+                        <li class="a-list__item" >Embracing Change</li>
+                        <li class="a-list__item" >Let Solutions Emerge</li>
+                        <li class="a-list__item" >Deliver Solutions Fast & Frequently</li>
+                        <li class="a-list__item" >Trust People to Get Things Done</li>
+                        <li class="a-list__item" >Continuously Assess & Improve</li>
+                    </ul>
+                </section>
+
+                <a class="slide__images red" target="_blank"  href="https://www.amazon.com/Winning-Culture-Game-Curtis-Cochran-ebook/dp/B08BW2PQ26/ref=sr_1_5?crid=1DFJDXK4VDGG9&keywords=dr+curtis+cochran&qid=1638732818&sprefix=dr+curtis+coch%2Caps%2C248&sr=8-5"><img  src="{{ url_for('static', filename='images/books/cc-book-5.png') }}" alt="Image of red book about winning the culture game in business"></a>
+                
+
+            </article>
+        </section>
+        <section class="products__backgrounds products__strategy js-scroll--right">
+            <h2 class="strategy__titles">LEARN OUR E4 STRATEGY</h2>
+           <article class="slide strategy__slide ">
+                <a class="slide__images blue" target="_blank" href="https://www.amazon.com/Semantics-Mathematics-Business-Curtis-Cochran-ebook/dp/B08P659PYZ/ref=sr_1_1?dchild=1&keywords=dr.+curtis+c+cochran&qid=1614298475&sr=8-1"><img  src="{{ url_for('static', filename='images/books/cc-book-1.png') }}" alt="image of blue the semantics of math in business image"></a>
+                <section class="strategy__text">
+                    <p class="text__book_info">
+                        Start & Exit a Business!
+                    </p>
+                    <ul class="strategy__list">
+                        <li class="s-list__item" >
+ 
+                            <em>"IMPACTFUL! A GAME CHANGER!"</em> 
+                            -James Kiser, Longtime Helath Care CEO
+                        </li>
+                        <li class="s-list__item" class="s-list__item" >
+
+                            <em>
+                                "BEST BUSINESS BOOK I HAVE EVER READ I LOVE YOUR
+                                4 CYCLES OF BUSINESS OWNERSHIP"
+                            </em> - Bran Scheeler, Longtime Business Owner
+                        </li>
+                    </ul>
+                </section>
+           </article>
+        </section>
+
+    </article>
+
+
+    <article class="ocm__company-mindset ">
+
+        <section class="company-mindset__textblocks js-scroll--left">
+            <p class="textblock p1">
+                Do you have to own your own business in order for our wealth building system to work? 
+                Yes! Unfortunately, many people are still being sucked in by the old conventional wisdom, 
+                "Go to school, get good grades, get a good job, work hard and everything will be great." You 
+                don't have to have two Doctorate Degrees (this would be me) to recognize that method doesn't work 
+                and never has. Notice, 85% of the population never becomes financially independent. I have nothing 
+                against having a job, but for most people, the acronym of J.O.B., "Just Over Broke," is spot on.
+            </p>
+        </section>
+        <section class="company-mindset__textblocks js-scroll--right">
+            <p class="textblock 2__p">
+                There is a thin line between being an entrepreneur and a self-employed solopreneur. 
+                To convert from being an overworked "solopreneur" into an entrepreneur with a viable exit plan, 
+                you must first decide to change your mindset. You must make up your mind to cross that line. 
+                You must firmly decide whether you want to continue to be an entrepreneur boss and a self-employed 
+                slave to your own business, or whether you really want to exit with financial security.
+            </p>
+        </section>
+
+    </article>
+
+    <article class="ocm__cochran">
+
+        <section class="cochran__image js-scroll--left">
+            <div class="image__background">
+                <img class="image"
+                src="{{ url_for('static', filename='images/our_team/team_image_1.png' ) }}"
+                alt="Image of Dr Curtis C. Cochran in blue suit."
+                >
+            </div>
+        </section>
+        <section class="cochran__ethos js-scroll--right">
+            <h2 class="ethos__title">Dr. Curtis C. Cochran</h2>
+            <p class="ethos__textblock">Dr. Curtis Cochran is the founder of Cochran 
+                Consulting LLC. He is also the creator of the 
+                highly acclaimed OCC Team Executive Coaching Mentor 
+                Program. He assists entrepreneurs in entering, evaluating, 
+                enhancing, and exiting business ownership.
+            </p>
+        </section>
+    </article>
+</main>
 {% endblock %}
+
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='scripts/scrollRenderLogic.js')}}"></script>
+<script src="{{ url_for('static', filename='scripts/eSquare.js') }}"></script>
+{% endblock %}
+
+
+

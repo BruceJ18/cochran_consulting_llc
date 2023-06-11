@@ -31,8 +31,10 @@
   width: 91%;
   height: 90%;
 
+  
   justify-items: center;
   align-items: center;
+  
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 50%);
 
@@ -42,7 +44,11 @@
   color: white;
 }
 
-/* all background info for e's */
+/* all background info for e's  */
+.e-info-background {
+  margin-top: 20px;
+}
+
 .e-info-background,
 #e3-list li {
   width: 80%;
@@ -50,7 +56,8 @@
 
   padding: 0.9rem;
   padding-bottom: 2rem;
-
+  
+  
   font-size: 100%;
   font-family: sans-serif;
   letter-spacing: 1px;
@@ -67,11 +74,10 @@
   grid-row: 1;
 }
 
+
 .position {
   color: whitesmoke;
   font-family: "Times New Roman", Times, serif;
-  position: relative;
-  bottom: 7.4rem;
   z-index: 0;
 }
 
@@ -80,6 +86,7 @@
   grid-column: 2;
   grid-row: 1;
 }
+
 
 #e3-background-info,
 .e3-info-title,
@@ -99,11 +106,17 @@
   list-style: disc;
 }
 
+.position {
+  align-self: self-start;
+  margin-bottom: 1rem;
+}
+
 #e4-background-info,
 .e4-info-title {
   grid-column: 2;
   grid-row: 2;
 }
+
 
 #e1-background-info::first-letter,
 #e2-background-info::first-letter,
@@ -359,8 +372,7 @@ p {
 
   #e-square h2 {
     font-size: 1rem;
-    margin-bottom: 0px;
-    margin-top: 40px;
+    
   }
 
   #e-square-background {
@@ -376,6 +388,7 @@ p {
   }
 
   .e-info-background {
+    margin-top: 20px;
     font-size: 71%;
   }
 
@@ -384,7 +397,7 @@ p {
   }
 
   #e3-list li {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   #e-square-subtext-section p {
@@ -436,6 +449,7 @@ p {
 
   .e-info-background {
     font-size: 65%;
+    margin-top: 20px;
   }
 
   #e3-list {
@@ -463,11 +477,11 @@ p {
 
   #e-square h2 {
     font-size: 75%;
-    margin-top: 60px;
   }
 
   .e-info-background {
     font-size: 55%;
+    margin-top: 20px;
   }
 
   #e3-list {
@@ -487,7 +501,9 @@ p {
    
     #e-square h2 {
         font-size: 0.75rem;
-        margin-bottom: 0px;
-        margin-top: 55px;
+    }
+
+    .e-info-background {
+      margin-top: 20px;
     }
 }
