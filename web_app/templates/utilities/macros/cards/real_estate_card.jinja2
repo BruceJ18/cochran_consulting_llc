@@ -1,0 +1,47 @@
+{% macro real_estate_card(real_estate) %}
+
+    {% for home in real_estate %}
+    
+    
+    
+<section class="business_card">
+    
+        {% if not business.info.sold %}
+        <a class="business__link" target="_blank" href="{{ business_info.link }}">
+        <img class="business_card__img" src="/static/images/business_listings/business_image_{{ business_info.id }}.jpg"/>
+        </a>
+        {% else %}
+            <div class="business__sold"><p>SOLD</p></div>
+        {% endif %}
+    
+        <h2 class="business__name">{{ business_info.name}}</h2>
+    
+    
+        <p class="business_card__info">
+        {{ business_info.business_desc }}----(<em class="info--em">click image for more details</em>)
+        </p>
+    
+        <ul class="business_card__socials">
+            <li>
+                <a href="tel:19512377234">
+                    <i class="material-icons business_card__icon phone">phone</i>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:curtis@ccochranconsulting.com">
+                    <i class="material-icons business_card__icon email">email</i>
+                </a>
+            </li>
+            <li>
+                <a  href="https://www.linkedin.com/in/ccochranconsulting" target="_blank">
+                    <i class="fab fa-linkedin-in l icon"></i>
+                </a>
+            </li>
+        </ul>
+</section>
+
+    
+    
+    {% endfor %}
+
+{% endmacro %}

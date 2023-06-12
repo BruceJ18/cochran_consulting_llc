@@ -1,0 +1,12 @@
+{% extends "/listings/listings_layout.html" %}
+{% from "/utilities/macros/cards/business_card.jinja2" import business_card %}
+
+{% block listing_title %}
+    Business Listing
+{% endblock %}
+
+{% block listing %}
+    
+        {{ business_card(businesses) }}
+
+{% endblock %}

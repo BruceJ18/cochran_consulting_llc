@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/listings/listings_layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/listings/business_card.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/listings/real_estate_card.css') }}">
+{% endblock %}
+
+
+
+{% block main_content %}
+
+<main class="main__listings">
+    <h1 class="listings__heading">
+        {% block listing_title %}
+        {% endblock %}
+        <hr>
+        <hr>
+    </h1>
+      
+    <section class="listings__layout">
+
+        {% block listing %}
+        {% endblock %}
+    
+    </section>
+</main>
+
+{% endblock %}

@@ -56,14 +56,17 @@ def our_company_mindset():
 # listings route
 
 
-@app.route('/business_listings_1')
-def business_listings_1():
-    return render_template("/listings/business_listings_1.html")
+@app.route('/business_listings')
+def business_listings():
+    return render_template(
+        "/listings/business_listings.html",
+        businesses=app.db.businesses.find({}, {"_id": False})
+        )
 
 
 @app.route('/real-estate_listings')
 def real_estate_listings():
-    return render_template("/listings/real-estate_listings.html")
+    return render_template("/listings/real_estate_listings.html")
 
 # login page
 

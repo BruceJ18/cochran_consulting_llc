@@ -1,0 +1,85 @@
+.business__link {
+    text-decoration: none;
+    color: var(--background-color-3);
+}
+
+.business_card:hover {
+    scale: 103%;
+    transition: 0.2s ease-in-out;
+}
+
+.business_card {
+    display: grid;
+    grid-template-rows: 48% 13% 30% 8%;
+    justify-content: center;
+
+    height: 550px;
+    width: 350px;
+    padding: 1.3rem;
+
+    border: 3px solid darkslategray;
+    border-radius: 5px;
+
+
+    background-color: var(--background-color-4);
+    
+}
+
+.business_card__img {
+    justify-self: center;
+    align-self: center;
+
+    object-fit: cover;
+    height: 270px;
+    width: 350px;
+}
+
+.business__name {
+    
+    grid-row: 2;
+}
+
+.business_card__info {
+    background-color: var(--background-color-2);
+    
+    padding: 5px;
+    
+
+    grid-row: 3;
+
+    border-radius: 5px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+}
+
+.info--em {
+    color: rgba(0, 183, 255, 0.913);
+}
+
+.business_card__socials {
+    display: flex;
+    justify-content:space-around;
+    padding: 0.5rem;
+    margin: 0;
+
+    grid-row: 4;
+
+    list-style: none;
+
+    border-radius: 25px;
+    background-color: var(--background-color-3);
+}
+
+.business_card__icon {
+    color: whitesmoke;
+}
+
+.business_card__icon.phone:hover {
+    color: var(--background-color-1);
+}
+
+
+.business_card__icon.phone:hover {
+    color: var(--background-color-1);
+}

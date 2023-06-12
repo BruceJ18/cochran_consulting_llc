@@ -1,0 +1,13 @@
+{% extends "/listings/listings_layout.html" %}
+{% from "/utilities/macros/cards/real_estate_card.jinja2" import real_estate_card %}
+
+
+{% block listing_title %}
+    Real Estate Listing
+{% endblock %}
+
+{% block listing %}
+
+        {{ real_estate_card(real_estate) }}
+
+{% endblock %}

@@ -35,6 +35,8 @@ footer a {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    text-decoration: none;
     color: whitesmoke;
     font-family: 'Times New Roman', Times, serif;
 }

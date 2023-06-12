@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "/utilities/macros/employee_card.jinja2" import employee_card %}
+{% from "/utilities/macros/cards/employee_card.jinja2" import employee_card %}
 
 {% block head %}
 <link rel="stylesheet" href="/static/css/our_team/ourteam_main_content.css">
@@ -18,6 +18,11 @@
     
         {{ employee_card(employees) }}
     
+    
+    </section>
+</main>
+
+  
     </section>
 </main>
 

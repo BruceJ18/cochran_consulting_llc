@@ -1,0 +1,31 @@
+.main__listings {
+    margin: 3rem 0;
+}
+
+
+.listings__heading {
+    color: whitesmoke;
+    margin: 0 auto;
+    padding: 0.2rem 4rem;
+    margin: 2rem auto;
+    border: 3px solid darkslategray;
+    background-color: var(--background-color-3);
+}
+
+.listings__heading hr {
+    margin: 0.5rem;
+}
+
+.listings__heading  hr:last-of-type {
+    width: 80%;
+    margin: 0.5rem auto ;
+}
+
+
+.listings__layout {
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: max-content;
+    grid-auto-rows: auto;
+    grid-template-columns: 33% 33% 33%;
+}
