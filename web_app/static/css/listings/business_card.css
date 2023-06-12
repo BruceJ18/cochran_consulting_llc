@@ -70,16 +70,3 @@
     border-radius: 25px;
     background-color: var(--background-color-3);
 }
-
-.business_card__icon {
-    color: whitesmoke;
-}
-
-.business_card__icon.phone:hover {
-    color: var(--background-color-1);
-}
-
-
-.business_card__icon.phone:hover {
-    color: var(--background-color-1);
-}

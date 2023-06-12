@@ -3,7 +3,9 @@
     grid-template-rows: 45% 8% 7% 30% 10%;
     align-items: center;
     
-    width: fit-content;
+
+    height: 580px;
+    width: 350px;
 
     padding: 1rem;
 
@@ -25,10 +27,11 @@
     display: block;
     font-size: larger;
 
+    padding: 1rem;
+    margin-top: 5px;
     font-family: sans-serif;
     align-self: self-start;
     background-color: var(--background-color-2);
-    padding: 1rem;
     border-radius: 1rem;
     color: whitesmoke;
     overflow: auto;   
@@ -50,27 +53,17 @@
     list-style: none;
 }
 
-.employee_card__icon {
-    color: whitesmoke;
-}
-
-.employee_card__icon.phone:hover {
-    color: rgb(4, 173, 156);
-}
-
-.employee_card__icon.email:hover {
-    color: darkslategray;
-}
 
 @media screen and (max-width: 2000px) {
     .employee_card {
-        grid-template-rows: 40% 8% 7% 30% 15%;
+        
+        grid-template-rows: 40% 5% 6% 40% 8%;
     }
 }
 
 @media screen and (max-width: 1400px) {
     .employee_card {
-        grid-template-rows: 40% 8% 7% 33% 15%;
+        grid-template-rows: 40% 5% 6% 40% 8%;
     }
 
     

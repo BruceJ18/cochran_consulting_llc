@@ -29,3 +29,15 @@
     grid-auto-rows: auto;
     grid-template-columns: 33% 33% 33%;
 }
+
+.card__icon {
+    color: whitesmoke;
+}
+
+.card__icon.phone:hover {
+    color: rgb(4, 173, 156);
+}
+
+.card__icon.email:hover {
+    color: darkslategray;
+}
