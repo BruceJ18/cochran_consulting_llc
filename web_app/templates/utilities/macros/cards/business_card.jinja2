@@ -1,24 +1,23 @@
 {% macro business_card(businesses) %}
 
     {% for business in businesses %}
-    {% set business_info = business.info %}
     
     
 <section class="business_card">
     
-        {% if not business_info.sold %}
-        <a class="business__link" target="_blank" href="{{ business_info.link }}">
-        <img class="business_card__img" src="/static/images/business_listings/business_image_{{ business_info.id }}.jpg"/>
+        {% if not business.info.sold %}
+        <a class="business__link" target="_blank" href="{{ business.info.link }}">
+        <img class="business_card__img" src="/static/images/business_listings/business_image_{{ business.info.id }}.jpg"/>
         </a>
         {% else %}
             <div class="business__sold"><p>SOLD</p></div>
         {% endif %}
     
-        <h2 class="business__name">{{ business_info.name}}</h2>
+        <h2 class="business__name">{{ business.info.name}}</h2>
     
     
         <p class="business_card__info">
-        {{ business_info.business_desc }}----(<em class="info--em">click image for more details</em>)
+        {{ business.info.business_desc }}----(<em class="info--em">click image for more details</em>)
         </p>
     
         <ul class="business_card__socials">
@@ -32,11 +31,7 @@
                     <i class="material-icons card__icon email">email</i>
                 </a>
             </li>
-            <li>
-                <a  href="https://www.linkedin.com/in/ccochranconsulting" target="_blank">
-                    <i class="fab fa-linkedin-in l icon"></i>
-                </a>
-            </li>
+            
         </ul>
 </section>
 

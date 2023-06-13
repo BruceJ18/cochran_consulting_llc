@@ -66,7 +66,17 @@ def business_listings():
 
 @app.route('/real-estate_listings')
 def real_estate_listings():
-    return render_template("/listings/real_estate_listings.html")
+    return render_template(
+        "/listings/real_estate_listings.html",
+        real_estate=app.db.real_estate.find({}, {"_id":False})
+        )
+
+
+# z-score
+
+@app.route('/z_score')
+def z_score():
+    return render_template("/resources/z_score.html")
 
 # login page
 
@@ -239,12 +249,12 @@ def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
         
         model = Real_Estate(
         form.id.data,
-        form.name.data,
         form.price.data,
         form.location.data,
         form.rooms.data,
         form.baths.data,
         form.sqft.data,
+        form.link.data,
         form.sold.data
         )
         db_add_or_edit(selected_form, mod_selection, model, prev_id)

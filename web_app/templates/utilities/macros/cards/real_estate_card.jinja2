@@ -4,41 +4,80 @@
     
     
     
-<section class="business_card">
+        <section class="home_card">
     
-        {% if not business.info.sold %}
-        <a class="business__link" target="_blank" href="{{ business_info.link }}">
-        <img class="business_card__img" src="/static/images/business_listings/business_image_{{ business_info.id }}.jpg"/>
-        </a>
-        {% else %}
-            <div class="business__sold"><p>SOLD</p></div>
-        {% endif %}
-    
-        <h2 class="business__name">{{ business_info.name}}</h2>
-    
-    
-        <p class="business_card__info">
-        {{ business_info.business_desc }}----(<em class="info--em">click image for more details</em>)
-        </p>
-    
-        <ul class="business_card__socials">
-            <li>
-                <a href="tel:19512377234">
-                    <i class="material-icons business_card__icon phone">phone</i>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:curtis@ccochranconsulting.com">
-                    <i class="material-icons business_card__icon email">email</i>
-                </a>
-            </li>
-            <li>
-                <a  href="https://www.linkedin.com/in/ccochranconsulting" target="_blank">
-                    <i class="fab fa-linkedin-in l icon"></i>
-                </a>
-            </li>
-        </ul>
-</section>
+            {% if not home.info.sold %}
+
+            {# generalize listing__link and lisitng__sold #}
+
+            <a class="listing__link" target="_blank" href="{{ home.info.link }}">
+            <img class="home__img" src="/static/images/real_estate_listings/home_image_{{ home.info.id }}.png"/>
+            </a>
+            {% else %}
+                <div class="listing__sold"><p>SOLD</p></div>
+            {% endif %}
+        
+            <h2 class="home__price"> Price:  {{ home.info.price}}</h2>
+
+            
+        <section class="home__details">
+
+
+        
+            <section class="home__detail location">
+
+            <i class="material-icons icons">place</i> 
+            <span>{{ home.info.location }}</span>
+
+            </section>
+
+
+
+            <section class="home__detail rooms">
+        
+            <i class="material-icons icons">night_shelter</i> 
+            <span>{{ home.info.rooms }}</span>
+        
+            </section>
+
+
+
+            <section class="home__detail baths">
+        
+            <i class="material-icons icons">bathtub</i> 
+            <span>{{ home.info.baths }}</span>
+        
+            </section>
+
+
+
+            <section class="home__detail sqft">
+        
+            <i class="material-icons icons">grid_on</i> 
+            <span>{{ home.info.sqft }} sqft</span>
+        
+            </section>
+
+
+        
+        </section>
+        
+            
+        
+            <ul class="card__socials">
+                <li>
+                    <a href="tel:19512377234">
+                        <i class="material-icons card__icon phone">phone</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:curtis@ccochranconsulting.com">
+                        <i class="material-icons card__icon email">email</i>
+                    </a>
+                </li>
+            </ul>
+
+        </section>
 
     
     

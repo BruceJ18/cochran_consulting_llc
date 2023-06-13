@@ -1,52 +1,43 @@
-{% extends "/listings/listings_layout.html" %}
-
-
-
-
-        {% block listing_title %}
-            Z - Score
+{% extends "/resources/resources_layout.html" %}
+        
+        {% block resource_title %}
+        Z - Score
         {% endblock %}
-
-
-{% block listing %}
-
-
-    <a class="z_score__a" href="https://lp.constantcontactpages.com/su/28UGKb0">
-        <img class="z_score__img" src="{{ url_for('static', filename='images/z_score.png') }}" alt="Image of chart with growth in the positive x direction and y direction.">
-    </a>
-
-    <section class="z_score__points">
-        <h2 class="z_score__detail">Great Analytic Tool</h2>
-        <h2 class="z_score__detail">Stern View of Your Financial Statements</h2>
-        <h2 class="z_score__detail">Business Decline Warnings</h2>
-        <h2 class="z_score__detail">Projection Of Your Efforts</h2>
-        <h2 class="z_score__detail"> <<< Click The Image If Interested!</h2>
-    </section>
-
-    <section class="z_score__desc">
-        <p class="z_score__text">
-            The interesting thing about the Z-Score is that it is a good 
-            analytic tool no matter what shape your company is in. Even 
-            if your company is very healthy, for example, if your Z-Score 
-            begins to fall sharply, warning bells should ring. Or, if your 
-            company is barely surviving, your can use the Z-Score to help 
-            evaluate the projected effects of your Enhancing efforts.
-        </p>
-    </section>
-    <section class="z_score__desc">
-        <p class="z_score__text">
-            Everything has a value. Putting value in dollar terms is the 
-            cornerstone not only of running a business but also of investing 
-            in almost any form. Knowing how to arrive at a value for the 
-            physical and intrinsic characteristics of a business is essential 
-            to building wealth of all kinds. To that end, people who invest 
-            in companies need to look beyond the current state of the 
-            business they own (or want to own).
-        </p>
-    </section>
-
-
-
+        {% block resource %}
+        <a class="z_score__a" href="https://lp.constantcontactpages.com/su/28UGKb0">
+            <img class="z_score__img" src="{{ url_for('static', filename='images/z_score.png') }}" alt="Image of chart with growth in the positive x direction and y direction.">
+        </a>
+    
+        <section class="z_score__points">
+            <h2 class="z_score__detail">Great Analytic Tool</h2>
+            <h2 class="z_score__detail">Stern View of Your Financial Statements</h2>
+            <h2 class="z_score__detail">Business Decline Warnings</h2>
+            <h2 class="z_score__detail">Projection Of Your Efforts</h2>
+            <h2 class="z_score__detail"> <<< Click The Image If Interested!</h2>
+        </section>
+    
+        <section class="z_score__desc">
+            <p class="z_score__text">
+                The interesting thing about the Z-Score is that it is a good
+                analytic tool no matter what shape your company is in. Even
+                if your company is very healthy, for example, if your Z-Score
+                begins to fall sharply, warning bells should ring. Or, if your
+                company is barely surviving, your can use the Z-Score to help
+                evaluate the projected effects of your Enhancing efforts.
+            </p>
+        </section>
+        <section class="z_score__desc">
+            <p class="z_score__text">
+                Everything has a value. Putting value in dollar terms is the
+                cornerstone not only of running a business but also of investing
+                in almost any form. Knowing how to arrive at a value for the
+                physical and intrinsic characteristics of a business is essential
+                to building wealth of all kinds. To that end, people who invest
+                in companies need to look beyond the current state of the
+                business they own (or want to own).
+            </p>
+        </section>
 {% endblock %}
+
 
     

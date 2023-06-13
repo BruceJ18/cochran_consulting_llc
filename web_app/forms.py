@@ -78,5 +78,6 @@ class Real_Estate_Form(FlaskForm):
     baths = IntegerField("Baths")
     sqft = IntegerField("Sqft")
     sold = BooleanField("Sold")
+    link = URLField('Link')
     submit = SubmitField("Submit",  validators=[InputRequired()])
     delete = StringField("Type in 'Delete' to delete entity: ")

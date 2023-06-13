@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources/z_score.css') }}">
+{% endblock %}
+
+
+
+{% block main_content %}
+
+<main class="z_score__main"> 
+    <h1 class="z_score__heading">
+       {% block resource_title %}
+       {% endblock %}
+        <hr>
+        <hr>
+    </h1>
+      
+<section class="listings__layout--two_cols">
+    {% block resource %}
+    {% endblock %}
+</section>
+
+</main>
+{% endblock %}
