@@ -42,3 +42,10 @@ class Real_Estate:
     sqft: int
     link: str
     sold: False
+
+@dataclass
+class User:
+    id: int
+    name: str
+    email: str
+    password: str

@@ -1,10 +1,13 @@
 import os
+from passlib.hash import pbkdf2_sha256
 from dataclasses import asdict
 from flask import (
     Flask,
+    flash,
     render_template,
     request,
     redirect,
+    session,
     url_for
 )
 from pymongo import MongoClient
@@ -14,13 +17,16 @@ from web_app.forms import (
     Employee_Form,
     Business_Form,
     Real_Estate_Form,
+    LoginForm
 )
 from web_app.models import (
     Client,
     Employee,
     Business,
-    Real_Estate
+    Real_Estate,
+    User
     )
+
 
 
 load_dotenv()
@@ -28,7 +34,7 @@ load_dotenv()
 app = Flask(__name__)
 client = MongoClient(os.environ.get("MONGODB_URI"))
 app.db = client.get_default_database()
-app.secret_key = os.environ.get('SECRET_KEY', 'dev')
+app.secret_key = os.environ.get('SECRET_KEY')
 
 
 
@@ -81,9 +87,37 @@ def z_score():
 # login page
 
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
-    return render_template("resources/login.html")
+    if session.get('email'):
+        return redirect(url_for('add_or_edit'))
+    
+    login_form = LoginForm()
+
+    if login_form.validate_on_submit():
+        user_data = app.db.users.find_one({"info.email" : login_form.email.data}, {"_id" : False}).get('info')
+        
+        if not user_data:
+            flash("Login credentials are incorrect.", category="danger")
+            return redirect(url_for("login"))
+        user = User(**user_data)
+
+        if user and pbkdf2_sha256.verify(login_form.password.data, user.password):
+            session['user_id'] = user.id
+            session['email'] = user.email
+
+            return redirect(url_for('index'))
+        
+        flash("Login credentials are incorrect.", category="danger")
+
+    return render_template(
+        "resources/login.html", 
+        login_form=login_form)
+
+@app.route("/logout")
+def logout():
+    session.clear()
+    return redirect(url_for('login'))
 
 
 # add or edit entities

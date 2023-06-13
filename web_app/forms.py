@@ -3,14 +3,14 @@ from wtforms import (
     IntegerField, StringField, 
     SubmitField, EmailField, 
     TextAreaField, URLField, 
-    BooleanField
+    BooleanField, PasswordField
     )
-from wtforms.validators import InputRequired, NumberRange, Length
+from wtforms.validators import InputRequired, NumberRange, Length, Email
 
 class Client_form_index(FlaskForm):
     name = StringField("Client Name", validators=[InputRequired()])
     business_name = StringField("Business Name",  validators=[InputRequired()])
-    email = EmailField("Email", validators=[InputRequired("Please enter your email address.")])
+    email = EmailField("Email", validators=[InputRequired("Please enter your email address."), Email()])
     cell_number = IntegerField("Cell",  validators=[InputRequired()])
     website_address = StringField("Website Address", validators=[InputRequired()])
     annual_revenue = IntegerField(
@@ -51,7 +51,7 @@ class Employee_Form(FlaskForm):
     id = IntegerField("id", validators=[InputRequired()])
     name = StringField("Employee Name:",  validators=[InputRequired()])
     cell_number = StringField("Cell:")
-    email = EmailField("Email:",  validators=[InputRequired()])
+    email = EmailField("Email:",  validators=[InputRequired(), Email()])
     background = TextAreaField("Background:", validators=[Length(max=244)])
     positions = StringListField("Positions:")
     linkedin = URLField("Linkedin:")
@@ -81,3 +81,8 @@ class Real_Estate_Form(FlaskForm):
     link = URLField('Link')
     submit = SubmitField("Submit",  validators=[InputRequired()])
     delete = StringField("Type in 'Delete' to delete entity: ")
+
+class LoginForm(FlaskForm):
+    email = StringField("Email", validators=[InputRequired(), Email()])
+    password = PasswordField("Password", validators=[InputRequired()])
+    submit = SubmitField("Login")

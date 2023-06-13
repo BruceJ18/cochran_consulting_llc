@@ -1,1 +1,28 @@
 {% extends "base.html" %}
+{% from "/utilities/macros/fields/iter_fields.jinja2" import iter_fields %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/resources/login.css') }}">
+{% endblock %}
+
+
+{% block main_content %}
+<main class="login__main" method="post">
+
+    
+
+    <form method="post" action="{{ url_for('login') }}" class="login__form" novalidate>
+
+    {% with messages = get_flashed_messages(with_categories=True) %}
+    {% for category, message in messages %}
+    <span class="form__flash"> {{ message }}</span>
+
+    {% endfor %}
+    {% endwith %}
+
+    {{ iter_fields(login_form) }}
+    
+    </form>
+
+</main>
+{% endblock %}

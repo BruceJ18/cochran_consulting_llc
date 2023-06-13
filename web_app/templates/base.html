@@ -74,7 +74,10 @@
                             <li><a href="{{ url_for('z_score') }}">Z-Score</a></li>
                             <li><a href="">Our Non-Profits</a></li>
                             <li><a href="">Our Books</a></li>
-                            <li><a href="{{ url_for('add_or_edit') }}">Login</a></li>
+                            <li><a href="{{ url_for('login') }}">Login</a></li>
+                            {% if session['email'] %}
+                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            {% endif %}
 
                         </ul>
                     </div>
