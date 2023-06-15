@@ -10,12 +10,14 @@
 
 /* --------------- FORM TYPE CSS --------------- */
 
-/* .form-type__form {
-
+.form-type__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.form-type__radio-buttons {
-
+/* .form-type__radio-buttons {
+  
 } */
 
 .form-type__group {
@@ -28,23 +30,24 @@
     background-color: black;
 }
 
-/* .form-type__label {
-
+.form-type__label {
+    padding: 0.4rem;
 }
 
-.form-type__input {
-  
-} */
+/* .form-type__input {
+    
+}  */
 
 
 /* ------------ SELECT CSS -------------- */
 
-/* .form-type__selects {
-  
-} */
+.form-type__selects {
+    margin: 0.5rem;
+}
 
 .form-type__selects--2 {
   display: none;
+
 }
 
 .form-type__select--add {
@@ -52,15 +55,46 @@
 }
 
 .form-type__select--add.active {
+  width: 100%;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 2rem;
+  background-color: var(--background-color-1);
   display: unset;
 }
 
 .form-type__select--edit {
+  
   display: none;
 }
 
 .form-type__select--edit.active {
+  width: 100%;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 2rem;
+  background-color: var(--background-color-1);
   display: unset;
+}
+
+.select--edit__entities {
+  width: 100%;
+  
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 2rem;
+  background-color: var(--background-color-1);
+}
+
+.form-type__button {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border-radius: 2rem;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+  background-color: var(--background-color-3);
+  cursor: pointer;
 }
 
 /* .select__option {

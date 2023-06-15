@@ -58,14 +58,22 @@
 /* --------- THIRD SECTION QUOTE -below --------- */
 
 .ocm__quotes {
-    width: 40vw;
+    height: 530px;
+    
+    padding: 1.25rem;
+    border: 3px solid darkslategray;
+    border-radius: 1rem;
+
+    background-color: var(--background-color-2);
+    
+    
 
 }
 
 .ocm__quote {
     height: fit-content;
 
-    padding: 1.2rem 1rem;
+    padding: 0.7rem 1rem;
     margin: 1rem 0 0 0;
 
     
@@ -536,16 +544,22 @@ hr {
 /* QUOTE --- MEDIA QUERIES -below */
 
 .ocm__quotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-left: 3rem;
-    width: 40vw;
+    height: 590px;
+    width: 900px;
 }
 
 .ocm__quote {
-    width: 100%;
+    margin: 0.5rem 0;
+    width: 90%;
 }
 
 .quote {
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 1.5rem;
 }
 
@@ -605,14 +619,17 @@ hr {
 
 /* QUOTE --- MEDIA QUERIES -below */
 .ocm__quotes {
+    height: 370px;
     width: 47vw;
 }
 
 .ocm__quote {
     width: 85%;
+    margin: 0.3rem;
 }
 
 .quote {
+    padding: 0.8rem;
     font-size: 1.2rem;
 
 }
@@ -643,6 +660,7 @@ hr {
     /* QUOTE --- MEDIA QUERIES -below */
     
     .ocm__quotes {
+        height: 480px;
         width: 47vw;
     }
 

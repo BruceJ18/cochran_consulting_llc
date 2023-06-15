@@ -35,6 +35,7 @@ class Business:
 @dataclass
 class Real_Estate:
     id: int
+    name: str
     price: str
     location: str
     rooms: int

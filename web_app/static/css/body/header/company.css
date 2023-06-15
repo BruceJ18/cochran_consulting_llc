@@ -105,6 +105,13 @@ h1 {
   
 }
 
+@media (max-height: 400px) {
+    header {
+        grid-template-rows: 22vh 8vh 15.5vh;
+        }
+}
+
+
 /* width media queries below */
 
 @media (max-width: 1280px ) {

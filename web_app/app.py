@@ -1,5 +1,6 @@
 import os
 from passlib.hash import pbkdf2_sha256
+from werkzeug.datastructures import FileStorage
 from dataclasses import asdict
 from flask import (
     Flask,
@@ -14,6 +15,7 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 from web_app.forms import (
     Client_Form,
+    Client_Form_Index,
     Employee_Form,
     Business_Form,
     Real_Estate_Form,
@@ -35,7 +37,8 @@ app = Flask(__name__)
 client = MongoClient(os.environ.get("MONGODB_URI"))
 app.db = client.get_default_database()
 app.secret_key = os.environ.get('SECRET_KEY')
-
+UPLOAD_FOLDER = 'web_app/static/images'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
 # homepage route
@@ -43,7 +46,10 @@ app.secret_key = os.environ.get('SECRET_KEY')
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+
+    client_form = Client_Form_Index()
+
+    return render_template("index.html", client_form=client_form)
 
 # about us route
 
@@ -70,6 +76,18 @@ def business_listings():
         )
 
 
+@app.route('/our_books')
+def our_books():
+    return render_template(
+        "/resources/our_books.html"
+        )
+
+@app.route('/our_nprfts')
+def our_nprfts():
+    return render_template(
+        "/resources/our_nprfts.html"
+        )
+
 @app.route('/real-estate_listings')
 def real_estate_listings():
     return render_template(
@@ -89,9 +107,6 @@ def z_score():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    if session.get('email'):
-        return redirect(url_for('add_or_edit'))
-    
     login_form = LoginForm()
 
     if login_form.validate_on_submit():
@@ -236,10 +251,19 @@ def db_add_or_edit(selected_form: str, mod_selection: str, model, prev_id : int)
 
 
 
-def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
+
+def update_model(selected_form: str, mod_selection: str, 
+                 form:
+                Client_Form | 
+                Employee_Form | 
+                Business_Form | 
+                Real_Estate_Form
+                 , prev_id: int):
     
     if selected_form == 'employees':
-        
+
+       
+
         model = Employee(
         form.id.data,
         form.name.data,
@@ -249,9 +273,20 @@ def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
         form.positions.data,
         form.linkedin.data
         )
+        
+        
+        file = request.files['employee_image_']
+        name_id = form.employee_image_.name + str(form.id.data) + '.png'
+        folder = app.config['UPLOAD_FOLDER'] + '/our_team/'
+        if type(file) == FileStorage:
+            file.save(os.path.join(folder, name_id))
+        
+        
+        
         db_add_or_edit(selected_form, mod_selection, model, prev_id)
 
     elif selected_form == 'clients':
+
         
         model = Client(
         form.id.data,
@@ -264,6 +299,7 @@ def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
         form.questions_or_comments.data
         )
 
+        
         db_add_or_edit(selected_form, mod_selection, model, prev_id)
         
     
@@ -276,6 +312,13 @@ def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
         form.link.data,
         form.sold.data
         )
+
+        file = request.files['business_image_']
+        name_id = form.business_image_.name + str(form.id.data) + '.png'
+        folder = app.config['UPLOAD_FOLDER'] + '/business_listings/'
+        if type(file) == FileStorage:
+            file.save(os.path.join(folder, name_id))
+
         db_add_or_edit(selected_form, mod_selection, model, prev_id)
     
     
@@ -283,6 +326,7 @@ def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
         
         model = Real_Estate(
         form.id.data,
+        form.name.data,
         form.price.data,
         form.location.data,
         form.rooms.data,
@@ -291,9 +335,16 @@ def update_model(selected_form: str, mod_selection: str, form, prev_id: int):
         form.link.data,
         form.sold.data
         )
+        if type(request.files['home_image_']) == FileStorage:
+            file = request.files['home_image_']
+            name_id = form.home_image_.name + str(form.id.data) + '.png'
+            folder = app.config['UPLOAD_FOLDER'] + '/real_estate_listings/'
+            file.save(os.path.join(folder, name_id))
+        
         db_add_or_edit(selected_form, mod_selection, model, prev_id)
 
     
+
         
 
 
@@ -303,7 +354,12 @@ def add():
     selected_form_add = request.args.get('selected_form_add') 
     form = get_form(selected_form_add)
 
+
+
     if form.validate_on_submit():
+        
+
+
         update_model(selected_form_add, mod_selection, form, None)
         return redirect(url_for('add_or_edit')) # SUCCESS MESSAGE NEEDED --------------------
     
@@ -345,11 +401,26 @@ def edit():
     if form.validate_on_submit():
         if form.delete.data == 'Delete':
             app.db[selected_form_edit].delete_many({'info.id' : entity_id})
-             
+
+            if selected_form_edit == 'employees':
+                path = 'our_team/employee_image_'
+            elif selected_form_edit == 'businesses':
+                path = 'business_listings/business_image_'
+            elif selected_form_edit == 'real_estate':
+                path = 'real_estate_listings/home_image_'
+                
+            
+            
+            # must change to server path -below ------------------------------------------------------
+
+            full_path = '/Users/bruce/OneDrive/Documents/cochran_consulting_llc/web_app/static/images/' + path + str(form.id.data) + '.png'
+
+            os.remove( full_path )
+            return redirect(url_for('index'))
             
 
         update_model(selected_form_edit, mod_selection, form, entity_id)
-        return redirect(url_for('add_or_edit')) # SuCCESS MESSAGE NEEDED ----------------
+        return redirect(url_for('add_or_edit')) # SuCCESS MESSAGE NEEDED ----------------------------
 
 
 

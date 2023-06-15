@@ -29,6 +29,7 @@
     grid-auto-rows: max-content;
     grid-auto-rows: auto;
     grid-template-columns: 33% 33% 33%;
+    margin-top: 5rem;
 }
 
 

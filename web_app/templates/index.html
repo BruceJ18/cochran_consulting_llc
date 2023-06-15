@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "utilities/macros/fields/iter_fields.jinja2" import iter_fields %}
 
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/e-square.css') }}">
@@ -6,6 +7,7 @@
     <link rel="stylesheet" href=" {{ url_for('static', filename='css/body/main/blockquote.css') }} ">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/testimonials&businesses.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/body/main/books.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/site_mods/add_or_edit.css') }}">
 {% endblock %}
 
 {% block main_content %}
@@ -30,7 +32,7 @@
             </p>
 
             <h2 class="e3-info-title position">Enhancing</h2>
-            <p class="e-info-background" id="e3-background-info">
+            <section class="e-info-background" id="e3-background-info">
                 <ul id="e3-list">
                     <li>Understand Business Value</li>
                     <li>Present Value of Future Earnings</li>
@@ -38,7 +40,7 @@
                     <li>Capitalization of Excess Earnings</li>
                     <li>Fair Market Value</li>
                 </ul>
-            </p>
+            </section>
 
             <h2 class="e4-info-title position">Exiting</h2>
             <p class="e-info-background" id="e4-background-info">     
@@ -49,10 +51,10 @@
                 Exit, this is an excellent time to make your move.
             </p>
 
-            <div class="e-div e1"><img class="e" src="../static/images/e1.png" alt="image with e raised 1"></div>
-            <div class="e-div e2"><img class="e" src="../static/images/e2.png" alt="image with e and 2"></div>
-            <div class="e-div e3"><img class="e" src="../static/images/e3.png" alt="image with e and 3"></div>
-            <div class="e-div e4"><img class="e" src="../static/images/e4.png" alt="image with e and 4"></div>               
+            <div class="e-div e1"><img class="e" src="../static/images/e_square/e1.png" alt="image with e raised 1"></div>
+            <div class="e-div e2"><img class="e" src="../static/images/e_square/e2.png" alt="image with e and 2"></div>
+            <div class="e-div e3"><img class="e" src="../static/images/e_square/e3.png" alt="image with e and 3"></div>
+            <div class="e-div e4"><img class="e" src="../static/images/e_square/e4.png" alt="image with e and 4"></div>               
         </section>
 
         <section id="e-square-subtext-section">
@@ -92,31 +94,8 @@
         </section>
         <section id="fill-in">
             <!-- must get database to store form "fill-in" information -->
-            <form action="" method="post">
-                <fieldset id="label-container"> 
-                    <label for="contact-name" class="label-form-info">Contact Name <em class="required">*</em> 
-                        <input required class="input-textarea-class" id="contact-name" name="contact-name" type="text">
-                    </label>
-                    <label for="business-name" class="label-form-info">Business Name<em class="required">*</em>
-                        <input required class="input-textarea-class" id="business-name" name="business-name" type="text">
-                    </label>
-                    <label for="email" class="label-form-info">Email<em class="required">*</em> 
-                        <input required class="input-textarea-class" id="email" name="email" type="email">
-                    </label>
-                    <label for="cell-number" class="label-form-info">Cell Number<em class="required">*</em> 
-                        <input required class="input-textarea-class" id="cell-number" name="cell-number" type="number">
-                    </label>
-                    <label for="website-address" class="label-form-info">Website Address<em class="required">*</em> 
-                        <input required class="input-textarea-class" id="website-address" name="website-address" type="url">
-                    </label>
-                    <label for="annual-revenue" class="label-form-info">Annual Revenue<em class="required">*</em> 
-                        <input required class="input-textarea-class"id="annual-revenue" name="annual-revenue" type="number" min="500,000" max="100,000,000">
-                    </label>
-                    <label for="questions-or-comments">Questions or Comments
-                        <textarea class="input-textarea-class" id="questions-or-comments" name="questions-or-comments" cols="30" rows="10"></textarea>
-                    </label>    
-                </fieldset>
-                <input id="submit" type="submit" value="Submit"> 
+            <form class="client__form" action="" method="post">
+                {{ iter_fields(client_form) }}
             </form>
         </section>
     </article>

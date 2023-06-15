@@ -5,16 +5,23 @@ from wtforms import (
     TextAreaField, URLField, 
     BooleanField, PasswordField
     )
-from wtforms.validators import InputRequired, NumberRange, Length, Email
+from flask_wtf.file import FileField, FileAllowed, FileRequired
+from wtforms.validators import (
+    InputRequired, 
+    NumberRange, 
+    Length, Email
+    )
 
-class Client_form_index(FlaskForm):
-    name = StringField("Client Name", validators=[InputRequired()])
-    business_name = StringField("Business Name",  validators=[InputRequired()])
-    email = EmailField("Email", validators=[InputRequired("Please enter your email address."), Email()])
-    cell_number = IntegerField("Cell",  validators=[InputRequired()])
-    website_address = StringField("Website Address", validators=[InputRequired()])
+
+
+class Client_Form_Index(FlaskForm):
+    name = StringField("Name* :", validators=[InputRequired()])
+    business_name = StringField("Business Name* :",  validators=[InputRequired()])
+    email = EmailField("Email* :", validators=[InputRequired("Please enter your email address."), Email()])
+    cell_number = IntegerField("Cell* :",  validators=[InputRequired()])
+    website_address = StringField("Website Address* :", validators=[InputRequired()])
     annual_revenue = IntegerField(
-        "Annual Revenue",  
+        "Annual Revenue* :",  
         validators=[
         InputRequired(), 
         NumberRange(
@@ -22,14 +29,14 @@ class Client_form_index(FlaskForm):
         max=50000000, 
         message="Only companies with annual revenues between $500,000 to $50,000,000"
         )])
-    questions_or_comments = TextAreaField("Questions or Comments", validators=[InputRequired()])
+    questions_or_comments = TextAreaField("Questions or Comments* :", validators=[InputRequired()])
     submit = SubmitField("Submit")
-    delete = StringField("Type in 'Delete' to delete entity: ")
-
-
-class Client_Form(Client_form_index):
-    id = IntegerField("id", validators=[InputRequired()])
     
+
+
+class Client_Form(Client_Form_Index):
+    id = IntegerField("id", validators=[InputRequired()])
+    delete = StringField("Type in 'Delete' to delete entity: ")
     
 
 class StringListField(TextAreaField):
@@ -55,8 +62,15 @@ class Employee_Form(FlaskForm):
     background = TextAreaField("Background:", validators=[Length(max=244)])
     positions = StringListField("Positions:")
     linkedin = URLField("Linkedin:")
+    employee_image_ = FileField(
+        "Employee Image",
+        validators=[
+            FileAllowed(
+                ['jpg', 'png', 'webp'], 'images only!')
+                ])
     submit = SubmitField("Submit")
     delete = StringField("Type in 'Delete' to delete entity: ")
+
 
 
 class Business_Form(FlaskForm):
@@ -65,6 +79,13 @@ class Business_Form(FlaskForm):
     business_desc = TextAreaField("Description")
     sold = BooleanField("Sold")
     link = URLField('Link')
+    business_image_ = FileField(
+        "Business Image",
+        validators=[ 
+            FileRequired(), 
+            FileAllowed(
+                ['jpg', 'png', 'webp'], 'images only!')
+                ])
     submit = SubmitField("Submit",  validators=[InputRequired()])
     delete = StringField("Type in 'Delete' to delete entity: ")
 
@@ -72,6 +93,7 @@ class Business_Form(FlaskForm):
 
 class Real_Estate_Form(FlaskForm):
     id = IntegerField("id", validators=[InputRequired()])
+    name = StringField("Name", validators=[InputRequired()])
     price = StringField("Price")
     location = StringField("Location")
     rooms = IntegerField("Rooms")
@@ -79,6 +101,12 @@ class Real_Estate_Form(FlaskForm):
     sqft = IntegerField("Sqft")
     sold = BooleanField("Sold")
     link = URLField('Link')
+    home_image_ = FileField(
+        "Home Image",
+        validators=[ 
+            FileAllowed(
+                ['jpg', 'png', 'webp'], 'images only!')
+                ])    
     submit = SubmitField("Submit",  validators=[InputRequired()])
     delete = StringField("Type in 'Delete' to delete entity: ")
 

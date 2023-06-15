@@ -5,14 +5,7 @@
 }
 
 
-.listings__layout--two_cols {
-    display: grid;
-    align-items: center;
-    
 
-    grid-template-columns: 45vw 45vw;
-    margin: 4rem 5vw;
-}
 
 .z_score__heading {
     color: whitesmoke;
@@ -95,23 +88,5 @@
     color: black;
 }
 
-@media (min-width: 1500px) {
-    .listings__layout--two_cols {
-        grid-template-columns: 38vw 38vw;
-        
-     margin: 4rem 12vw;
-
-    }
-}
-
-
-@media (min-width: 1700px) {
-    .listings__layout--two_cols {
-        grid-template-columns: 30vw 30vw;
-        
-     margin: 4rem 20vw;
-
-    }
-}
 
 

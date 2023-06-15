@@ -1,8 +1,19 @@
 .login__main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100vh;
+    margin-bottom: 2rem;
+}
+
+.login__header {
+    border-radius: 3rem;
+    padding: 0.5rem 3rem;
+    margin: 1rem auto;
+    
+    
+    box-shadow: 5px 5px 4px darkslategray;
+    color: whitesmoke;
+    background-color: var(--background-color-3);
 }
 
 .login__form {
@@ -39,7 +50,7 @@
     width: 200px;
     padding: 1rem;
 
-    box-shadow: 10px 5px 5px darkred;
+    box-shadow: 5px 5px 5px darkred;
     border-radius: 1rem;
     color: whitesmoke;
     background-color: red;
