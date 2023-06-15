@@ -275,10 +275,10 @@ def update_model(selected_form: str, mod_selection: str,
         )
         
         
-        file = request.files['employee_image_']
-        name_id = form.employee_image_.name + str(form.id.data) + '.png'
-        folder = app.config['UPLOAD_FOLDER'] + '/our_team/'
-        if type(file) == FileStorage:
+        if form.home_image_.data != None:
+            file = request.files['employee_image_']
+            name_id = form.employee_image_.name + str(form.id.data) + '.png'
+            folder = app.config['UPLOAD_FOLDER'] + '/our_team/'
             file.save(os.path.join(folder, name_id))
         
         
@@ -313,10 +313,10 @@ def update_model(selected_form: str, mod_selection: str,
         form.sold.data
         )
 
-        file = request.files['business_image_']
-        name_id = form.business_image_.name + str(form.id.data) + '.png'
-        folder = app.config['UPLOAD_FOLDER'] + '/business_listings/'
-        if type(file) == FileStorage:
+        if form.home_image_.data != None:
+            file = request.files['business_image_']
+            name_id = form.business_image_.name + str(form.id.data) + '.png'
+            folder = app.config['UPLOAD_FOLDER'] + '/business_listings/'
             file.save(os.path.join(folder, name_id))
 
         db_add_or_edit(selected_form, mod_selection, model, prev_id)
@@ -335,7 +335,7 @@ def update_model(selected_form: str, mod_selection: str,
         form.link.data,
         form.sold.data
         )
-        if type(request.files['home_image_']) == FileStorage:
+        if form.home_image_.data != None:
             file = request.files['home_image_']
             name_id = form.home_image_.name + str(form.id.data) + '.png'
             folder = app.config['UPLOAD_FOLDER'] + '/real_estate_listings/'
@@ -357,9 +357,6 @@ def add():
 
 
     if form.validate_on_submit():
-        
-
-
         update_model(selected_form_add, mod_selection, form, None)
         return redirect(url_for('add_or_edit')) # SUCCESS MESSAGE NEEDED --------------------
     

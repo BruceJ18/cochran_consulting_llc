@@ -1,5 +1,5 @@
 .main__add-or-edit {
-    height: 100vh;
+    height: 150vh;
 }
 
 
@@ -131,6 +131,18 @@
 .add-or-edit__form__field {
     width: 100%;
     margin-bottom: 0.6rem;
+}
+
+
+.add-or-edit__form__field#submit {
+  padding: 0.3rem;
+  border: none;
+  border-radius: 2rem;
+
+  color: whitesmoke;
+  background-color: var(--background-color-3);
+
+  cursor: pointer;
 }
 
 /* ---------------  error handling styling below ---------------  */
