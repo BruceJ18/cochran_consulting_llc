@@ -400,19 +400,22 @@ def edit():
             app.db[selected_form_edit].delete_many({'info.id' : entity_id})
 
             if selected_form_edit == 'employees':
-                path = 'our_team/employee_image_'
+                path = 'our_team/employee_image_' + str(form.id.data) + '.png'
             elif selected_form_edit == 'businesses':
-                path = 'business_listings/business_image_'
+                path = 'business_listings/business_image_' + str(form.id.data) + '.png'
             elif selected_form_edit == 'real_estate':
-                path = 'real_estate_listings/home_image_'
+                path = 'real_estate_listings/home_image_' + str(form.id.data) + '.png'
                 
             
             
             # must change to server path -below ------------------------------------------------------
 
-            full_path = '/Users/bruce/OneDrive/Documents/cochran_consulting_llc/web_app/static/images/' + path + str(form.id.data) + '.png'
+            full_path = '/Users/bruce/OneDrive/Documents/cochran_consulting_llc/web_app/static/images/' + path 
+            rel_path = '/static/images/' + path
 
-            os.remove( full_path )
+            if os.path.exists(full_path):
+                os.remove( full_path )
+
             return redirect(url_for('index'))
             
 
