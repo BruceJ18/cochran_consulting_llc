@@ -1,6 +1,5 @@
 import os
 from passlib.hash import pbkdf2_sha256
-from werkzeug.datastructures import FileStorage
 from dataclasses import asdict
 from flask import (
     Flask,
@@ -28,7 +27,6 @@ from web_app.models import (
     Real_Estate,
     User
     )
-
 
 
 load_dotenv()
@@ -275,7 +273,7 @@ def update_model(selected_form: str, mod_selection: str,
         )
         
         
-        if form.home_image_.data != None:
+        if form.employee_image_.data != None:
             file = request.files['employee_image_']
             name_id = form.employee_image_.name + str(form.id.data) + '.png'
             folder = app.config['UPLOAD_FOLDER'] + '/our_team/'
