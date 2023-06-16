@@ -1,0 +1,1 @@
+from web_app.routes.resources import resources_bp

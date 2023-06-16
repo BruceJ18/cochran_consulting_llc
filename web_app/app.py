@@ -27,13 +27,18 @@ from web_app.models import (
     Real_Estate,
     User
     )
+from web_app.routes.resources import resources_bp
 
 
 load_dotenv()
 
 app = Flask(__name__)
+
+app.register_blueprint(resources_bp)
+
 client = MongoClient(os.environ.get("MONGODB_URI"))
 app.db = client.get_default_database()
+
 app.secret_key = os.environ.get('SECRET_KEY')
 UPLOAD_FOLDER = 'web_app/static/images'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -66,12 +71,20 @@ def our_company_mindset():
 # listings route
 
 
-@app.route('/business_listings')
-def business_listings():
-    return render_template(
-        "/listings/business_listings.html",
-        businesses=app.db.businesses.find({}, {"_id": False})
-        )
+# @app.route('/business_listings')
+# def business_listings():
+#     return render_template(
+#         "/listings/business_listings.html",
+#         businesses=app.db.businesses.find({}, {"_id": False})
+#         )
+
+# @app.route('/real-estate_listings')
+# def real_estate_listings():
+#     return render_template(
+#         "/listings/real_estate_listings.html",
+#         real_estate=app.db.real_estate.find({}, {"_id":False})
+#         )
+
 
 
 @app.route('/our_books')
@@ -86,12 +99,6 @@ def our_nprfts():
         "/resources/our_nprfts.html"
         )
 
-@app.route('/real-estate_listings')
-def real_estate_listings():
-    return render_template(
-        "/listings/real_estate_listings.html",
-        real_estate=app.db.real_estate.find({}, {"_id":False})
-        )
 
 
 # z-score
