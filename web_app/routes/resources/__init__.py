@@ -1,16 +1,16 @@
 from flask import Blueprint
 
+
 # --------------- RESOURCES BLUEPRINT -------------------
 
 resources_bp = Blueprint(
-    'resources', 
+    'resources',
     __name__, 
-    template_folder='templates', 
+    template_folder='templates',
     static_folder='static'
     )
 
-from web_app.routes.resources import resources_routes
 
+# IMPORT ROUTES
 
-
-
+from web_app.routes.resources import basic_resources_routes

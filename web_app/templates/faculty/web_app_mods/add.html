@@ -1,0 +1,21 @@
+{% extends "faculty/web_app_mods/add_or_edit.html" %}
+
+
+
+{% block form_type %}
+<form enctype="multipart/form-data"  action="{{ url_for('faculty.add', mod_selection=mod_selection, selected_form_add=selected_form_add ) }}"  name="add-or-edit__form" method="post" novalidate class="add-or-edit__form">
+    <section class="form__container">
+        
+
+        {{ iter_fields(form) }}
+
+
+    </section>
+</form>
+{% endblock %}
+    
+
+    
+
+            
+       

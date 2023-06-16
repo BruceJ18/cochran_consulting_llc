@@ -11,7 +11,7 @@
 
     <h1 class="login__header">Log In</h1>
 
-    <form method="post" action="{{ url_for('login') }}" class="login__form" novalidate>
+    <form method="post" action="{{ url_for('faculty.login') }}" class="login__form" novalidate>
 
     {% with messages = get_flashed_messages(with_categories=True) %}
     {% for category, message in messages %}

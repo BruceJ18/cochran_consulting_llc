@@ -54,7 +54,8 @@
 }
 
 .info--em {
-    color: rgba(0, 183, 255, 0.913);
+    color: var(--background-color-3);
+    font-weight: bold;
 }
 
 .business_card__socials {

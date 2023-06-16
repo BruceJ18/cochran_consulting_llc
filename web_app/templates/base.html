@@ -48,48 +48,56 @@
             <section id="sub-name"><h1>Cochran </h1><p id="subtitle">Consulting, llc</p></section>
         </section>
         <section>
+
             <nav id="navigation-bar">
                 <div class="dropdown hide" data-dropdown>
                     <button class="link" data-dropdown-button>About Us</button>
                     <div class="dropdown-menu">
                         <ul>
-                            <li><a href="{{ url_for('our_team') }}">Our Team</a></li>
-                            <li><a href="{{ url_for('our_company_mindset') }}">Our Company Mindest</a></li>
+                            <li><a href="{{ url_for('about_us.our_team') }}">Our Team</a></li>
+                            <li><a href="{{ url_for('about_us.our_company_mindset') }}">Our Company Mindest</a></li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="dropdown hide" data-dropdown>
                     <button class="link" data-dropdown-button>Listings</button>
                     <div class="dropdown-menu">
                         <ul>
-                            <li><a href="{{ url_for('resources.business_listings') }}">Business Listings</a></li>
-                            <li><a href="{{ url_for('resources.real_estate_listings') }}">Real Estate Listings</a></li>
+                            <li><a href="{{ url_for('listings.business_listings') }}">Business Listings</a></li>
+                            <li><a href="{{ url_for('listings.real_estate_listings') }}">Real Estate Listings</a></li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="dropdown hide" data-dropdown>
                     <button class="link" data-dropdown-button>Resources</button>
                     <div class="dropdown-menu">
                         <ul>
-                            <li><a href="{{ url_for('z_score') }}">Z-Score</a></li>
-                            <li><a href="{{ url_for('our_nprfts') }}">Our Non-Profits</a></li>
-                            <li><a href="{{ url_for('our_books') }}">Our Books</a></li>
+                            <li><a href="{{ url_for('resources.z_score') }}">Z-Score</a></li>
+                            <li><a href="{{ url_for('resources.our_nprfts') }}">Our Non-Profits</a></li>
+                            <li><a href="{{ url_for('resources.our_books') }}">Our Books</a></li>
+                        </ul>
+                    </div>
+                </div>
 
+                <div class="dropdown hide" data-dropdown>
+                    <button class="link" data-dropdown-button>Faculty</button>
+                    <div class="dropdown-menu">
+                        <ul>
                             {% if not session['email'] %}
-                            <li><a href="{{ url_for('login') }}">Login</a></li>
+                            <li><a href="{{ url_for('faculty.login') }}">Employee Login</a></li>
                             {% endif %}
 
                             {% if session['email'] %}
-                            <li><a href="{{ url_for('add_or_edit') }}">Add Or Edit</a></li>
-                            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            <li><a href="{{ url_for('faculty.add_or_edit') }}">Add Or Edit</a></li>
+                            <li><a href="{{ url_for('faculty.logout') }}">Logout</a></li>
                             {% endif %}
 
                         </ul>
                     </div>
                 </div>
-                <div class="dropdown hide">
-                    <button class="link last"><a href="">Contact</a></button>
-                </div>
+
 <!-- ------------------------------------ bar menu ----------------------------------------- -->
                 
                 <div class="dropdown" data-dropdown id="bar" >
@@ -102,7 +110,7 @@
                                     <button class="link inner" data-dropdown-button-2>About Us</button>
                                     <div class="dropdown-menu two">
                                         <ul>
-                                            <li><a href="{{ url_for('our_team') }}">Our Team</a></li>
+                                            <li><a href="{{ url_for('about_us.our_team') }}">Our Team</a></li>
                                             <li><a href="">Our Company Mindest</a></li>
                                             
                                         </ul>
