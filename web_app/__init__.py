@@ -7,7 +7,8 @@ from web_app.routes import (
     listings_bp, 
     resources_bp, 
     about_us_bp, 
-    faculty_bp
+    faculty_bp,
+    index_bp
     )
 
 
@@ -33,16 +34,9 @@ def create_app():
     app.config['UPLOAD_FOLDER'] = os.environ.get('IMAGE_UPLOAD_FOLDER')
 
 
-     # --------------- INDEX ROUTE ---------------
-
-    @app.route("/")
-    def index():
-        client_form = Client_Form_Index()
-        return render_template("index.html", client_form=client_form)
-
-
     # ----------- REGISTERED BLUE PRINTS ---------
 
+    app.register_blueprint(index_bp)
     app.register_blueprint(about_us_bp)
     app.register_blueprint(listings_bp)
     app.register_blueprint(resources_bp)
