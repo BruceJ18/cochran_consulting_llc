@@ -37,6 +37,6 @@ class Business_Form(FlaskForm):
                 ])
     
 
-    submit = SubmitField("Submit",  validators=[InputRequired()])
+    submit = SubmitField("Submit")
     delete = StringField("Type in 'Delete' to delete entity: ")
 

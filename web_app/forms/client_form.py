@@ -30,7 +30,7 @@ class Client_Form_Index(FlaskForm):
             InputRequired("Please enter your email address."), Email()])
 
 
-    cell_number = IntegerField(
+    cell_number = StringField(
         "Cell* :",  
         validators=[InputRequired()])
 
@@ -50,8 +50,7 @@ class Client_Form_Index(FlaskForm):
     
 
     questions_or_comments = TextAreaField(
-        "Questions or Comments* :", 
-        validators=[InputRequired()])
+        "Questions or Comments:")
 
     submit = SubmitField("Submit")
     
