@@ -1,2 +1,1 @@
 FLASK_APP=web_app
-FLASK_DEBUG=1

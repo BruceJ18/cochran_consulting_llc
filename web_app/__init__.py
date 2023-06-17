@@ -11,14 +11,15 @@ from web_app.routes import (
     )
 
 
-
+# ---------------------- FLASK APP FACTORY -------------------
 
 def create_app():
     
-    load_dotenv()
 
     app = Flask(__name__)
 
+    # PYTHON - DOTENV
+    load_dotenv()
 
     #MONGODB CLIENT
     client = MongoClient(os.environ.get("MONGODB_URI"))
@@ -28,8 +29,8 @@ def create_app():
     app.secret_key = os.environ.get('SECRET_KEY')
 
     # UPLOAD FOLDER FOR FILE (IMAGE) USER INPUT
-    UPLOAD_FOLDER = 'web_app/static/images'
-    app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+    
+    app.config['UPLOAD_FOLDER'] = os.environ.get('IMAGE_UPLOAD_FOLDER')
 
 
      # --------------- INDEX ROUTE ---------------
