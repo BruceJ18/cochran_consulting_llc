@@ -70,7 +70,7 @@ def edit():
             if os.path.exists(full_path):
                 os.remove( full_path )
 
-            return redirect(url_for('index')) # no image was given or deleted MESSAGE
+            return redirect(url_for('index.index')) # no image was given or deleted MESSAGE
             
 
         update_model(selected_form_edit, mod_selection, form, entity_id)
