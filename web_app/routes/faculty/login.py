@@ -33,7 +33,7 @@ def login():
             session['user_id'] = user.id
             session['email'] = user.email
 
-            return redirect(url_for('index'))
+            return redirect(url_for('index.index'))
         
         flash("Login credentials are incorrect.", category="danger")
 

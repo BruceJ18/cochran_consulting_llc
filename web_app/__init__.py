@@ -37,7 +37,7 @@ def create_app():
     app.config['PORT'] = os.environ.get('PORT')
 
 
-
+    
     # ----------- REGISTERED BLUE PRINTS ---------
 
     app.register_blueprint(index_bp)
