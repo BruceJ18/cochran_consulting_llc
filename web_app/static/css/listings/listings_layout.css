@@ -65,7 +65,7 @@
 @media screen and (max-width: 1110px) {
     .listings__layout {
         margin: 0 auto;
-        row-gap: 1.3rem;
+        row-gap: 1.7rem;
         grid-template-columns: 44vw 44vw;
     }
 }

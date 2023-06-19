@@ -455,7 +455,7 @@ p {
 
 @media (max-width: 850px) {
   .main__index {
-    grid-template-columns: 10vw 85vw 10vw;
+    grid-template-columns: 10vw 86vw 10vw;
   }
 
   .e {

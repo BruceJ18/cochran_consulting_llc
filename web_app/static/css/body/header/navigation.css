@@ -41,7 +41,8 @@
 
 .dropdown-menu {
     position: absolute;
-    left: 0;
+    right: 0;
+    
     top: 100%;
 
     padding: .75rem;
@@ -83,6 +84,7 @@
 
 .dropdown-menu ul li:hover {
     background-color: var(--background-color-1);
+    
     border-radius: 1rem;
     
 }
@@ -144,8 +146,9 @@
     .dropdown-menu.bars {
         width: 15rem;
         left: unset;
-        right: 22%;
-        top: 10.5%;
+        right: 20%;
+        top: 18.5%;
+
         z-index: 4;
         
         padding-right: 0;
