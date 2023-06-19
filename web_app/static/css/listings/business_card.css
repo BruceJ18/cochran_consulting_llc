@@ -31,7 +31,7 @@
 
     object-fit: cover;
     height: 270px;
-    width: 350px;
+    width: 100%;
 }
 
 .business__name {
@@ -70,4 +70,21 @@
 
     border-radius: 25px;
     background-color: var(--background-color-3);
+}
+
+
+@media screen and (max-width: 1200px) {
+    .business_card {
+        
+        width: 310px;
+    }
+}
+
+
+
+@media screen and (max-width: 1110px) {
+    .business_card {
+        
+        width: 350px;
+    }
 }
