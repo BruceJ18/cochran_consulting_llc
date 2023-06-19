@@ -72,6 +72,15 @@
 
 @media screen and (max-width: 1200px) {
     .employee_card {
-        grid-template-rows: 40% 8% 7% 30% 15%;
+       
+        width: 310px;
     }
 }
+
+@media screen and (max-width: 1110px) {
+    .employee_card {
+        
+        width: 350px;
+    }
+}
+

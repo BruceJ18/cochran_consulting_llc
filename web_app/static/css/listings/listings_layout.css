@@ -1,4 +1,6 @@
 .main__listings {
+    display: flex;
+    flex-direction: column;
     margin: 3rem 0;
 }
 
@@ -58,5 +60,21 @@
 
     border-radius: 25px;
     background-color: var(--background-color-3);
+}
+
+@media screen and (max-width: 1110px) {
+    .listings__layout {
+        margin: 0 auto;
+        row-gap: 1.3rem;
+        grid-template-columns: 44vw 44vw;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .listings__layout {
+        
+        
+        grid-template-columns: 44vw;
+    }
 }
 
