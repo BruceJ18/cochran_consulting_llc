@@ -1,10 +1,6 @@
-
-
 .z_score__main {
     height: fit-content;
 }
-
-
 
 
 .z_score__heading {
@@ -49,7 +45,7 @@
 
 .z_score__detail {
     padding: 0.5rem 1rem;
-    width: 70%;
+    width: 80%;
     margin: 1.5rem;
     
     text-align: center;
@@ -65,12 +61,14 @@
     padding: 2rem;
     margin-top: 1rem;
 
+    
 
     border-radius: 5px;
     background-color: var(--background-color-4);
 }
 
 .z_score__text {
+    height: fit-content;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 1rem;
     margin: 0;
@@ -82,11 +80,13 @@
 }
 
 .z_score__text::first-letter {
-    
+    margin: 0.5rem;
     font-size: 3em;
     float: left;
     color: black;
 }
+
+
 
 
 

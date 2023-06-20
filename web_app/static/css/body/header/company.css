@@ -39,7 +39,6 @@ header {
 }
 
 h1 {
-    /* grid-column: 1 / -1; */
 
     width: fit-content;
     height: fit-content;
@@ -49,9 +48,16 @@ h1 {
     color:var(--background-color-3);
     font-style: sans-serif;
     font-size: 3rem;
+    letter-spacing: 0.1rem;
 
     border-bottom: 0.18rem solid var(--background-color-3);
 }
+
+h1::first-letter {
+    font-size: 3rem;
+}
+
+
 
 #subtitle {
     margin: 0 0 0 4rem;
@@ -84,30 +90,37 @@ h1 {
   
 }
 
+@media (max-height: 615px ) {
+    header {
+        grid-template-rows: 17vh 10vh 3.5vh;
+        }
+  
+}
+
 @media (max-height: 550px ) {
     header {
-        grid-template-rows: 17vh 7vh 3.5vh;
+        grid-template-rows: 19vh 7vh 8.5vh;
         }
   
 }
 
-@media (max-height: 470px ) {
+@media (max-height: 482px ) {
     header {
-        grid-template-rows: 19vh 7vh 3.5vh;
+        grid-template-rows: 21vh 7vh 8.5vh;
         }
   
 }
 
-@media (max-height: 420px ) {
+@media (max-height: 440px ) {
     header {
-        grid-template-rows: 21vh 7vh 3.5vh;
+        grid-template-rows: 23vh 7vh 8.5vh;
         }
   
 }
 
 @media (max-height: 400px) {
     header {
-        grid-template-rows: 22vh 8vh 15.5vh;
+        grid-template-rows: 25vh 8vh 15.5vh;
         }
 }
 
