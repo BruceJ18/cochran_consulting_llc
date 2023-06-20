@@ -54,6 +54,7 @@
 }
 
 #cochran {
+    object-fit: cover;
     box-sizing: border-box;
 
     height: 100%;
@@ -342,6 +343,14 @@ figcaption {
 
 
 /* minor breakpoint modification */
+@media (max-width: 850px) {
+    
+}
+
+
+
+
+/* minor breakpoint modification */
 @media (max-width: 780px) {
     #business-info {
         font-size: 1.15rem;
@@ -360,7 +369,7 @@ figcaption {
     }
 
     #frame {
-        width: 60%;
+        width: 70%;
         height: 86%;
     }
 
