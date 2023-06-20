@@ -111,7 +111,7 @@
                                     <div class="dropdown-menu two">
                                         <ul>
                                             <li><a href="{{ url_for('about_us.our_team') }}">Our Team</a></li>
-                                            <li><a href="">Our Company Mindest</a></li>
+                                            <li><a href="{{ url_for('about_us.our_company_mindset') }}">Our Company Mindest</a></li>
                                             
                                         </ul>
                                     </div>
@@ -122,8 +122,8 @@
                                     <button class="link inner" data-dropdown-button-2>Listings</button>
                                     <div class="dropdown-menu two">
                                         <ul>
-                                            <li ><a href="">Business Listings 1</a></li>
-                                            <li ><a href="">Real Estate Listings</a></li>
+                                            <li><a href="{{ url_for('listings.business_listings') }}">Business Listings</a></li>
+                                            <li><a href="{{ url_for('listings.real_estate_listings') }}">Real Estate Listings</a></li>
                                         </ul>
                                     </div>
                                     </div>
@@ -133,23 +133,38 @@
                                     <button class="link inner" data-dropdown-button-2>Resources</button>
                                     <div class="dropdown-menu two">
                                         <ul>
-                                            <li ><a href="">Z-Score</a></li>
-                
-                                            <li><a href="">Our Non-Profits</a></li>
-                                            <li><a href="">Our Books</a></li>
+                                            <li><a href="{{ url_for('resources.z_score') }}">Z-Score</a></li>
+                                            <li><a href="{{ url_for('resources.our_nprfts') }}">Our Non-Profits</a></li>
+                                            <li><a href="{{ url_for('resources.our_books') }}">Our Books</a></li>
                                         </ul>
                                     </div>
                                     </div>
                                 </li>
                                 <li>
+
+
                                     <div class="dropdown-2" data-dropdown-2>
-                                    <button class="link inner" data-dropdown-button-2><a href="">Contact</a></button>
-                                    
-                                    </div>
+                                        <button class="link inner" data-dropdown-button-2>Faculty</button>
+                                        <div class="dropdown-menu two">
+                                            <ul>
+                                                {% if not session['email'] %}
+                                                <li><a href="{{ url_for('faculty.login') }}">Employee Login</a></li>
+                                                {% endif %}
+                    
+                                                {% if session['email'] %}
+                                                <li><a href="{{ url_for('faculty.add_or_edit') }}">Add Or Edit</a></li>
+                                                <li><a href="{{ url_for('faculty.logout') }}">Logout</a></li>
+                                                {% endif %}
+                    
+                                            </ul>
+                                        </div>
+                                        </div>
+
+
+
                                 </li>
-                                
                             </ul>
-                        </div>
+                    </div>
                 </div>
                 
 
