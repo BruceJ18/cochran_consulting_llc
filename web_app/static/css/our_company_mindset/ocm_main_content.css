@@ -28,29 +28,82 @@
 
 
 
-/* --------- SECOND SECTION E-SQUARE --------- */
+/* --------- SECOND SECTION E-logos--------- */
 
 .ocm__e4 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.strip {
+    display:flex;
+    flex-direction: row;
     align-items: center;
 
-    margin-bottom: 2rem;
+    height: 15vh;
+    width: 47vw;
+    margin: 1rem 0;
+
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background-color: var(--background-color-2);
 }
 
-#e-square.ocm{
-    box-sizing: border-box;
+.strip.right {
+    border-top-left-radius: 6rem;
+    border-bottom-left-radius: 6rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
     
-    width: 40vw;
-    height: 85vh;
     
 }
 
-#e-square.ocm h2{
-    position: unset;       
-    margin-top: 0;
+.strip.left {
+    border-top-right-radius: 6rem;
+    border-bottom-right-radius: 6rem;
     
+    padding: 1rem 1rem 1rem 0;
+}
+
+.sub-strip {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 90%;
+    width: 100%;
     
+
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+
+    
+    background-color: var(--background-color-2);
+
+}
+
+.strip__img {
+    object-fit: contain;
+
+    height: 135px;
+    width: 135px;
+
+    border-radius: 5rem;
+    background-color: white;
+}
+
+.strip__text {
+    width: 100%;
+    padding: 1.8em;
+    padding-left: 1.8rem;
+    text-align: end;
+
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+
+    line-height: 1.5em;
+    font-size: 1rem;
+    background-color: var(--background-color-3);
 }
 
 
@@ -58,16 +111,8 @@
 /* --------- THIRD SECTION QUOTE -below --------- */
 
 .ocm__quotes {
-    height: 530px;
-    
+    height: fit-content;
     padding: 1.25rem;
-    border: 3px solid darkslategray;
-    border-radius: 1rem;
-
-    background-color: var(--background-color-2);
-    
-    
-
 }
 
 .ocm__quote {
@@ -234,7 +279,7 @@ hr {
 
 .text__book_info {
     width: 20rem;
-    padding: 0.5rem;
+    padding: 0.5rem 2rem;
     margin: 0;
     
     line-height: 1.3em;
@@ -497,7 +542,8 @@ hr {
     }
 
     .text__book_info {
-        width: 500px;
+        width: fit-content;
+
         font-size: 1.2rem;
     }
     
@@ -545,22 +591,31 @@ hr {
 
 .ocm__quotes {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 3rem;
-    height: 590px;
-    width: 900px;
+    justify-content: space-evenly;
+   
 }
 
 .ocm__quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0.5rem 0;
-    width: 90%;
+    width: 30%;
+    height: 220px;
+    
+}
+
+.ocm__quote hr {
+    width: 80%;
 }
 
 .quote {
-    padding: 1.5rem;
-    font-size: 1.5rem;
+    width: 70%;
+    padding: 1rem;
+
+    line-height: 1.5em;
+    font-size: 1.2em;
 }
 
 
@@ -570,26 +625,21 @@ hr {
 
     /* ESQUARE --- MEDIA QUERIES -below */
 
-    #e-square.ocm{
-        margin-right: 2rem;
-        width: 45vw;
-        height: 99vh;
+    .strip {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    
+        height: 24vh;
+        width: 47vw;
+        margin: 1rem 0;
+    
+    
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: whitesmoke;
+        background-color: var(--background-color-2);
     }
-
-
-
-    #e-square.ocm h2{
-        margin-top: 1.5rem;
-
-        margin-bottom: 1rem;
-        
-        
-    }
-    #e-square.ocm li{
-        font-size: 0.8em;
-        
-    }
-
+    
     
 
 
@@ -618,21 +668,7 @@ hr {
 }
 
 /* QUOTE --- MEDIA QUERIES -below */
-.ocm__quotes {
-    height: 370px;
-    width: 47vw;
-}
 
-.ocm__quote {
-    width: 85%;
-    margin: 0.3rem;
-}
-
-.quote {
-    padding: 0.8rem;
-    font-size: 1.2rem;
-
-}
 
     
 }
@@ -658,19 +694,14 @@ hr {
     }
 
     /* QUOTE --- MEDIA QUERIES -below */
-    
-    .ocm__quotes {
-        height: 480px;
-        width: 47vw;
-    }
-
     .ocm__quote {
-        width: 90%;
+        
+        height: 260px;
+        
     }
-
-    .quote {
-        font-size: 1.2rem;
-    }
+    
+    
+    
 
 /* PRODUCTS --- MEDIA QUERIES -below */    
 

@@ -18,58 +18,61 @@
 
     
 
-
+    {% for number in range(4) %}
     <section class="ocm__e4" >
 
-        <section class="ocm__esquare--background">
-            <section class="ocm" id="e-square">
-                <h2 class="e1-info-title position">Entering</h2>
-                <p class="e-info-background" id="e1-background-info">
-                    Entrepreneurs considering Entering business ownership were previously known as
+        <article class="strip left">
+            <div class="sub-strip left">
+                
+                <img class="strip__img" src="/static/images/e_square/e{{ number + 1 }}.png" alt="e4 Mathlosophy logos">
+
+            </div>
+        </article>
+
+
+        <article class="strip right">
+
+                <p class="strip__text">
+                    {% if number == 0 %}
+                    Enter: Entrepreneurs considering Entering business ownership were previously known as
                     buyers. We now refer to them as Entering entrepreneurs because there are many effective
                     opportunities to become the owner of a business in addition to buying a business.
-                </p>
-                <h2 class="e2-info-title position">Evaluating</h2>
-                <p class="e-info-background" id="e2-background-info">
-            
-                    A successful Business Enhancement Plan
-                    is the plan of action that accomplishes the needed objectives indicated in the
-                    Evaluation Report. Our Primary Business Consultant will lead in the design of
+                
+                    {% elif number == 1 %}
+                    Evaluating: A successful Business Enhancement Plan
+                    is the plan of action that accomplishes the needed objectives indicated in the 
+                    Evaluation Report. Our Primary Business Consultant will lead in the design of 
                     this plan and monitor each step in the accomplishment of increased cash flow.
-                </p>
-                <h2 class="e3-info-title position">Enhancing</h2>
-                <p class="e-info-background" id="e3-background-info">
-                    <ul id="e3-list">
-                        <li>Understand Business Value</li>
-                        <li>Present Value of Future Earnings</li>
-                        <li>Gross Revenue Multiples</li>
-                        <li>Capitalization of Excess Earnings</li>
-                        <li>Fair Market Value</li>
-                    </ul>
-                </p>
-                <h2 class="e4-info-title position">Exiting</h2>
-                <p class="e-info-background" id="e4-background-info">
-                    At some point, the owner of every business will consider
-                    an Exit Strategy to cash in on years of hard work and investment.
-                    If you have a current interest in Exiting your business, or
-                    considering maximizing the value of your business for a future
+                
+                    {% elif number == 2 %}
+                    Enhancing:
+                    Understand business value, 
+                    present value of future earnings,                    Gross Revenue Multiplier
+                    Capitalization of Excess Earnings,
+                    and Fair Market Value
+
+                    {% elif number == 3 %}
+                    Exit: At some point, the owner of every business will consider 
+                    an Exit Strategy to cash in on years of hard work and investment. 
+                    If you have a current interest in Exiting your business, or 
+                    considering maximizing the value of your business for a future 
                     Exit, this is an excellent time to make your move.
+                
+                    {% endif %}
                 </p>
-                <div class="e-div e1"><img class="e" src="../static/images/e_square/e1.png" alt="image with e raised 1"></div>
-                <div class="e-div e2"><img class="e" src="../static/images/e_square/e2.png" alt="image with e and 2"></div>
-                <div class="e-div e3"><img class="e" src="../static/images/e_square/e3.png" alt="image with e and 3"></div>
-                <div class="e-div e4"><img class="e" src="../static/images/e_square/e4.png" alt="image with e and 4"></div>               
-            </section>
-        </section>
+
+        </article>
+
+    </section>
+    {% endfor %}
 
 
-
-<section class="ocm__quotes">
+    <section class="ocm__quotes">
     
-            <section class="ocm__quote">
+            <section class="ocm__quote first">
             <hr>
                 <p class="quote">
-                    Our E4 Mathlosophy runs with a Culture that Empowers Leaders & Organizations. E4 Cultures Are Driven By Teams That
+                    Our E4 Mathlosophy has a Culture that Empowers Leaders & Organizations. E4 Cultures Are Driven By Teams That
                     Create & Deliver Disruptive Solutions Fast While Embracing Learning & Continuous
                     Improvement.
                     </p>
@@ -80,21 +83,14 @@
                     <p class="quote">
                         This E4 Culture is the inner workings of 
                         making an E4 business strategy work. Which should
-                        be the end goal of any business owner.
+                        be the end goal of any business owner. Ready to improve your business? Look at our Products 
+                        and services we offer below!
                         </p>
                     <hr>
-                </section>
-                <section class="ocm__quote">
-                    <hr>
-                        <p class="quote">
-                            Ready to improve your business? Look at our Products 
-                            and services we offer below! 
-                            </p>
-                        <hr>
-                    </section>
-</section>
-        
+            </section>
     </section>
+        
+    
     <article class="ocm__products ">
 
         <section class="products__backgrounds products__culture js-scroll--left">
