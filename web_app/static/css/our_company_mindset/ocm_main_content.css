@@ -381,6 +381,7 @@ hr {
 
 .textblock.p1::first-letter {
     float: left;
+    margin: 0.4em;
     font-size: 3rem;
     color: var(--background-color-3);
 }
@@ -575,17 +576,15 @@ hr {
 .company-mindset__textblocks {
     height: 60vh;
     width: 35vw;
-    
-
 }
 
-    .textblock {
-        width: 60%;
-        height: 80%;
+.textblock {
+    width: 60%;
+    height: 80%;
 
-        line-height: 1.8rem;
-        font-size: 1.4rem;
-    }
+    line-height: 1.8rem;
+    font-size: 1.4rem;
+}
 
 /* QUOTE --- MEDIA QUERIES -below */
 
