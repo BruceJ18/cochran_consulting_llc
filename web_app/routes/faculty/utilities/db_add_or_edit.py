@@ -14,4 +14,3 @@ def db_add_or_edit(selected_form: str, mod_selection: str, model, prev_id : int)
         current_app.db[selected_form].update_one(
             {'info.id' : prev_id}, 
             {"$set" : { 'info' : asdict(model)}})
-        

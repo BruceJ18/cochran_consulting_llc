@@ -39,4 +39,3 @@ def get_form(
     # PREFILLED (EDIT ROUTE) OR EMPTY ( ADD ROUTE, model = NONE ) FORM
 
     return get_form_dict[selected_form](obj=model)
-

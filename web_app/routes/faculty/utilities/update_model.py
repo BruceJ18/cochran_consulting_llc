@@ -107,5 +107,3 @@ def update_model(selected_form: str, mod_selection: str,
             file.save(os.path.join(folder, name_id))
         
         db_add_or_edit(selected_form, mod_selection, model, prev_id)
-
-    

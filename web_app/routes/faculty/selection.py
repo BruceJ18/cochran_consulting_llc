@@ -42,4 +42,3 @@ def selection():
 
         else:
             return redirect(url_for('faculty.add_or_edit')) # NEEDS ERROR MESSAGE --------
-        
